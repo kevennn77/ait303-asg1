@@ -57,6 +57,10 @@
 
 **Dependencies:** Phase 1
 
+**Plans:**
+- [ ] 02-01-PLAN.md — SVM + CountVectorizer: training, 5-fold CV, evaluation, and results
+- [ ] 02-02-PLAN.md — SVM + TfidfVectorizer: training, 5-fold CV, and consolidated 4-model comparison
+
 ---
 
 ### Phase 3: BiGRU Sentiment Models
