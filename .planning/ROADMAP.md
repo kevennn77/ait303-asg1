@@ -24,6 +24,8 @@
 
 **Requirements:** SENT-01, SENT-02, CODE-01, CODE-02, CODE-03
 
+**Plans:** 2 plans in 2 waves
+
 **Success Criteria:**
 1. IMDB dataset loaded and inspected — shape, missing values, class balance confirmed
 2. Dataset is balanced (or balancing strategy documented if already balanced)
@@ -32,6 +34,10 @@
 
 **Risks:**
 - Kaggle dataset download may require authentication — cache local copy
+
+**Plans:**
+- [ ] 01-01-PLAN.md — Dataset loading, inspection, and notebook scaffold
+- [ ] 01-02-PLAN.md — Text cleaning, stemming, and lemmatization pipelines
 
 ---
 
