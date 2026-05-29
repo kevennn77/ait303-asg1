@@ -70,6 +70,8 @@
 
 **Requirements:** SENT-05, SENT-06, SENT-09, SENT-10, SENT-11, SENT-12, SENT-13
 
+**Plans:** 2 plans in 2 waves
+
 **Success Criteria:**
 1. CBOW word embeddings trained on preprocessed reviews
 2. Skip-Gram word embeddings trained on preprocessed reviews
@@ -79,6 +81,10 @@
 6. All 4 models saved to disk (.pkl/.joblib for SVM, .h5 for BiGRU)
 
 **Dependencies:** Phase 1
+
+**Plans:**
+- [ ] 03-01-PLAN.md — Word2Vec embedding training (CBOW + Skip-Gram), vocabulary building, BiGRU model builder
+- [ ] 03-02-PLAN.md — 5-fold CV training for both BiGRU variants, evaluation, model saving, comparison with Phase 2
 
 ---
 
