@@ -3,19 +3,19 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-last_updated: "2026-05-29T18:15:42.245Z"
+last_updated: "2026-05-30"
 progress:
   total_phases: 6
-  completed_phases: 1
-  total_plans: 6
-  completed_plans: 2
-  percent: 17
+  completed_phases: 2
+  total_plans: 10
+  completed_plans: 6
+  percent: 33
 ---
 
 # Project State: AIT303 Assignment 1
 
 > **Last updated:** 2026-05-30
-> **Status:** Ready to execute
+> **Status:** Phase 03 complete — ready for Phase 04/05
 
 ## Project Reference
 
@@ -23,7 +23,7 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 
 **Core value:** Deliver a working aspect-based sentiment analysis pipeline with trained models, product rankings, and a well-documented Jupyter Notebook.
 
-**Current focus:** Phase 3 — BiGRU Sentiment Models
+**Current focus:** Phase 04/05 — Aspect Extraction & Labeling
 
 ## Phase Status
 
@@ -31,7 +31,7 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 |-------|--------|-------|----------|
 | 1 — Data Preparation & Preprocessing | ✓ Complete | 2/2 | 100% |
 | 2 — SVM Sentiment Models | ✓ Complete | 2/2 | 100% |
-| 3 — BiGRU Sentiment Models | ○ Planned | 2/2 | 0% |
+| 3 — BiGRU Sentiment Models | ✓ Complete | 2/2 | 100% |
 | 4 — Web Scraping & Aspect Extraction | ○ Pending | 0/0 | 0% |
 | 5 — Labeling, Ranking & Visualization | ○ Pending | 0/0 | 0% |
 | 6 — Report & Deliverables | ○ Pending | 0/0 | 0% |
@@ -78,6 +78,23 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 **Requirements satisfied:** SENT-03, SENT-04, SENT-07, SENT-08, SENT-11, SENT-12
 **Decisions honored:** D-10 through D-18
 
+### Phase 3: BiGRU Sentiment Models ✓
+
+**Deliverable:** `bigru_sentiment_models.ipynb`
+
+- **Section 1:** Setup & imports with full reproducibility (numpy+random+tf seeds), COLAB flag, Drive mount
+- **Section 2:** Load preprocessed IMDB data — extract lemmatized texts + encoded labels, no held-out split (all 50K for CV)
+- **Section 3:** Train Word2Vec CBOW (sg=0) and Skip-Gram (sg=1) with vector_size=100, window=5, min_count=5, epochs=5
+- **Section 4:** Build vocabulary (Tokenizer, VOCAB_SIZE=vocab+2), CBOW and SG embedding matrices (100-dim), BiGRU model builder (1-layer, 128 units/direction, dropout 0.5, sigmoid output)
+- **Section 5:** 5-fold StratifiedKFold CV training loop (seed=42, same as Phase 2) with EarlyStopping (patience=3, restore_best_weights=True), per-fold confusion matrices, model saving, memory cleanup (del model + clear_session + gc.collect)
+- **Section 6:** Aggregate metrics (mean ± std), comparison table (CBOW-BiGRU vs SG-BiGRU vs Phase 2 SVM best), ROC curves, loss curves, best model identification
+- **Section 7:** Model file verification — expects 12 files (2 Word2Vec .model + 10 BiGRU .h5)
+
+**Note:** Gensim cannot install on Python 3.14 (C API incompatibility). Notebook designed for Colab execution (Python 3.10). See [03-USER-SETUP.md](./phases/03-bigru-sentiment-models/03-USER-SETUP.md).
+
+**Plans executed:** 03-01 (notebook scaffold + Word2Vec), 03-02 (5-fold CV + evaluation)
+**Requirements satisfied:** SENT-05, SENT-06, SENT-09, SENT-10, SENT-11, SENT-12, SENT-13
+
 ## Recent Activity
 
 - 2025-05-26: Project initialized via `/gsd-new-project`
@@ -92,11 +109,19 @@ See: .planning/PROJECT.md (updated 2025-05-26)
   - CountVectorizer models: convergence warning (ill-conditioned features)
   - TfidfVectorizer models: clean convergence
 - 2025-05-30: **Phase 2 marked complete**
+- 2025-05-30: **Phase 3 notebook written** (`bigru_sentiment_models.ipynb`, 48 cells)
+- 2025-05-30: **Phase 3 marked complete**
 
 ## Next Actions
 
-1. **Phase 3 (BiGRU):** Execute BiGRU sentiment models with CBOW and Skip-Gram embeddings — run `/gsd-execute-phase 03` in a fresh session
-2. **🏷️ PENDING — Re-run SVM notebook after all phases complete:**
+1. **🏷️ PENDING — Run Phases 1-3 notebooks on Colab:**
+   - `sentiment_analysis_preprocessing.ipynb` — already verified via nbconvert, good to run
+   - `svm_sentiment_models.ipynb` — re-run with `max_iter=5000` for CountVectorizer convergence
+   - `bigru_sentiment_models.ipynb` — full 48-cell run on T4 GPU (~60-90 min)
+   - Why: All notebooks are written; final execution on Colab generates real model files
+2. **Phase 4 (Aspect Extraction):** Plan and execute LDA, BERTopic, CorEx topic models on Best Buy review data
+3. **Phase 5 (Labeling & Ranking):** Use best sentiment model for review labeling, produce product rankings
+4. **🏷️ PENDING — Re-run SVM notebook after all phases complete:**
    - Notebook: `svm_sentiment_models.ipynb`
    - What: Re-execute on Colab with `max_iter=5000` for full convergence of CountVectorizer models
    - Why: Current CountVectorizer models stopped at 2000 iterations (ConvergenceWarning); bump to 5000 for cleaner results for the report
