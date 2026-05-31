@@ -111,10 +111,10 @@
 - BERTopic requires sentence-transformers download — plan for first-run latency
 
 **Plans:**
-- [ ] 04-01-PLAN.md — Scraper script + Wave 0 test infrastructure
-- [ ] 04-02-PLAN.md — Notebook scaffold + preprocessing + SpaCy keyphrase extraction
-- [ ] 04-03-PLAN.md — Unsupervised topic models (LDA + BERTopic)
-- [ ] 04-04-PLAN.md — CorEx + model persistence + CSV export for Phase 5
+- [x] 04-01-PLAN.md — Scraper script + Wave 0 test infrastructure
+- [x] 04-02-PLAN.md — Notebook scaffold + preprocessing + SpaCy keyphrase extraction
+- [x] 04-03-PLAN.md — Unsupervised topic models (LDA + BERTopic)
+- [x] 04-04-PLAN.md — CorEx + model persistence + CSV export for Phase 5
 
 ---
 ### Phase 5: Labeling, Ranking & Visualization
@@ -176,13 +176,13 @@
 | SENT-09 | Phase 3 | Pending |
 | SENT-10 | Phase 3 | Pending |
 | SENT-13 | Phase 3 | Pending |
-| ABSA-01 | Phase 4 | Pending |
-| ABSA-02 | Phase 4 | Pending |
-| ABSA-03 | Phase 4 | Pending |
-| ABSA-04 | Phase 4 | Pending |
-| ABSA-05 | Phase 4 | Pending |
-| ABSA-06 | Phase 4 | Pending |
-| ABSA-07 | Phase 4 | Pending |
+| ABSA-01 | Phase 4 | Complete |
+| ABSA-02 | Phase 4 | Complete |
+| ABSA-03 | Phase 4 | Complete |
+| ABSA-04 | Phase 4 | Complete |
+| ABSA-05 | Phase 4 | Complete |
+| ABSA-06 | Phase 4 | Complete |
+| ABSA-07 | Phase 4 | Complete |
 | ABSA-08 | Phase 5 | Pending |
 | ABSA-09 | Phase 5 | Pending |
 | ABSA-10 | Phase 5 | Pending |

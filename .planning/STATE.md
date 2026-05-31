@@ -2,21 +2,20 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-last_updated: "2026-05-31T08:53:15.268Z"
+status: executing
+last_updated: "2026-05-31T10:15:00.000Z"
 progress:
   total_phases: 6
   completed_phases: 2
-  planned_phases: 3
   total_plans: 10
-  completed_plans: 4
+  completed_plans: 8
   percent: 33
 ---
 
 # Project State: AIT303 Assignment 1
 
-> **Last updated:** 2026-05-30
-> **Status:** Phase 03 complete — ready for Phase 04/05
+> **Last updated:** 2026-05-31
+> **Status:** Executing Phase 04 (notebook complete — ready for Colab execution)
 
 ## Project Reference
 
@@ -24,7 +23,7 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 
 **Core value:** Deliver a working aspect-based sentiment analysis pipeline with trained models, product rankings, and a well-documented Jupyter Notebook.
 
-**Current focus:** Phase 04/05 — Aspect Extraction & Labeling
+**Current focus:** Phase 04 — Web Scraping & Aspect Extraction
 
 ## Phase Status
 
@@ -33,7 +32,7 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 | 1 — Data Preparation & Preprocessing | ✓ Complete | 2/2 | 100% |
 | 2 — SVM Sentiment Models | ✓ Complete | 2/2 | 100% |
 | 3 — BiGRU Sentiment Models | ✓ Complete | 2/2 | 100% |
-| 4 — Web Scraping & Aspect Extraction | ● Planned | 4/4 | 0% |
+| 4 — Web Scraping & Aspect Extraction | ✓ Complete | 4/4 | 100% |
 | 5 — Labeling, Ranking & Visualization | ○ Pending | 0/0 | 0% |
 | 6 — Report & Deliverables | ○ Pending | 0/0 | 0% |
 
@@ -96,6 +95,23 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 **Plans executed:** 03-01 (notebook scaffold + Word2Vec), 03-02 (5-fold CV + evaluation)
 **Requirements satisfied:** SENT-05, SENT-06, SENT-09, SENT-10, SENT-11, SENT-12, SENT-13
 
+### Phase 4: Web Scraping & Aspect Extraction ✓
+
+**Deliverable:** `bestbuy_scraper.py` + `notebooks/aspect_extraction.ipynb`
+
+- **04-01:** Web scraper with polite crawling (random delays, retry/backoff, User-Agent rotation), HTML → JSON parsing, product catalog extraction
+- **04-02:** Notebook scaffold with SpaCy NP chunker keyphrase extraction, DataFrame validation
+- **04-03:** LDA (LdaMulticore, grid search 6-10, C_v coherence) and BERTopic (all-MiniLM-L6-v2, UMAP/HDBSCAN) unsupervised topic modeling
+- **04-04:** CorEx semi-supervised anchored topic modeling (8 aspects), three-model persistence (LDA/BERTopic/CorEx), Phase 5 CSV contract export
+
+**Output artifacts (created during Colab execution):**
+- `models/lda_model/` — gensim LdaMulticore
+- `models/bertopic_model/` — BERTopic safetensors
+- `models/corex_model.pkl` — CorEx anchored topic model
+- `data_asg/bestbuy/aspect_labeled_reviews.csv` — Phase 5 contract (7 columns)
+
+**Plans executed:** 04-01 (scraper), 04-02 (scaffold + preprocessing), 04-03 (LDA + BERTopic), 04-04 (CorEx + persistence + CSV)
+
 ## Recent Activity
 
 - 2025-05-26: Project initialized via `/gsd-new-project`
@@ -115,15 +131,12 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 
 ## Next Actions
 
-1. **Phase 4 (Aspect Extraction):** Execute 4 plans (04-01 through 04-04):
-   - 04-01: Create `bestbuy_scraper.py` + tests → run scraper on Best Buy (~30-40 min)
-   - 04-02: Create notebook scaffold + preprocessing + SpaCy keyphrase extraction
-   - 04-03: Add LDA + BERTopic unsupervised models
-   - 04-04: Add CorEx + model persistence + CSV export
-2. **🏷️ PENDING — Run Phases 1-3 notebooks on Colab:**
+1. ~~**Phase 4 (Aspect Extraction):** Execute 4 plans (04-01 through 04-04)~~ ✓ Complete
+2. **🏷️ PENDING — Run Phases 1-4 notebooks on Colab:**
    - `sentiment_analysis_preprocessing.ipynb` — already verified via nbconvert, good to run
    - `svm_sentiment_models.ipynb` — re-run with `max_iter=5000` for CountVectorizer convergence
    - `bigru_sentiment_models.ipynb` — full 48-cell run on T4 GPU (~60-90 min)
+   - `notebooks/aspect_extraction.ipynb` — full 46-cell run (requires Best Buy scraped data)
    - Why: All notebooks are written; final execution on Colab generates real model files
 3. **Phase 5 (Labeling & Ranking):** Use best sentiment model for review labeling, produce product rankings
 4. **🏷️ PENDING — Re-run SVM notebook after all phases complete:**
@@ -138,3 +151,4 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 |------|-----------|-------------|
 | 2026-05-26 | Phase 2 notebook written for Colab | `svm_sentiment_models.ipynb` |
 | 2026-05-30 | Phase 2 completed on Colab | `svm_sentiment_models.ipynb` |
+| 2026-05-31 | Phase 4 notebook completed (Sections 7-8 CorEx + persistence + CSV export) | `notebooks/aspect_extraction.ipynb` |
