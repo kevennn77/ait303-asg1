@@ -7,7 +7,8 @@ last_updated: "2026-05-31T08:53:15.268Z"
 progress:
   total_phases: 6
   completed_phases: 2
-  total_plans: 6
+  planned_phases: 3
+  total_plans: 10
   completed_plans: 4
   percent: 33
 ---
@@ -32,7 +33,7 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 | 1 — Data Preparation & Preprocessing | ✓ Complete | 2/2 | 100% |
 | 2 — SVM Sentiment Models | ✓ Complete | 2/2 | 100% |
 | 3 — BiGRU Sentiment Models | ✓ Complete | 2/2 | 100% |
-| 4 — Web Scraping & Aspect Extraction | ○ Pending | 0/0 | 0% |
+| 4 — Web Scraping & Aspect Extraction | ● Planned | 4/4 | 0% |
 | 5 — Labeling, Ranking & Visualization | ○ Pending | 0/0 | 0% |
 | 6 — Report & Deliverables | ○ Pending | 0/0 | 0% |
 
@@ -114,12 +115,16 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 
 ## Next Actions
 
-1. **🏷️ PENDING — Run Phases 1-3 notebooks on Colab:**
+1. **Phase 4 (Aspect Extraction):** Execute 4 plans (04-01 through 04-04):
+   - 04-01: Create `bestbuy_scraper.py` + tests → run scraper on Best Buy (~30-40 min)
+   - 04-02: Create notebook scaffold + preprocessing + SpaCy keyphrase extraction
+   - 04-03: Add LDA + BERTopic unsupervised models
+   - 04-04: Add CorEx + model persistence + CSV export
+2. **🏷️ PENDING — Run Phases 1-3 notebooks on Colab:**
    - `sentiment_analysis_preprocessing.ipynb` — already verified via nbconvert, good to run
    - `svm_sentiment_models.ipynb` — re-run with `max_iter=5000` for CountVectorizer convergence
    - `bigru_sentiment_models.ipynb` — full 48-cell run on T4 GPU (~60-90 min)
    - Why: All notebooks are written; final execution on Colab generates real model files
-2. **Phase 4 (Aspect Extraction):** Plan and execute LDA, BERTopic, CorEx topic models on Best Buy review data
 3. **Phase 5 (Labeling & Ranking):** Use best sentiment model for review labeling, produce product rankings
 4. **🏷️ PENDING — Re-run SVM notebook after all phases complete:**
    - Notebook: `svm_sentiment_models.ipynb`

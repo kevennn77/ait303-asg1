@@ -95,6 +95,8 @@
 
 **Requirements:** ABSA-01, ABSA-02, ABSA-03, ABSA-04, ABSA-05, ABSA-06, ABSA-07
 
+**Plans:** 4 plans in 3 waves
+
 **Success Criteria:**
 1. Python scraper collects 30+ speaker products with 100+ reviews each, with polite delays
 2. LDA model trained and produces interpretable topic clusters
@@ -108,8 +110,13 @@
 - Best Buy may block aggressive scraping — use randomized delays (1-3 second intervals)
 - BERTopic requires sentence-transformers download — plan for first-run latency
 
----
+**Plans:**
+- [ ] 04-01-PLAN.md — Scraper script + Wave 0 test infrastructure
+- [ ] 04-02-PLAN.md — Notebook scaffold + preprocessing + SpaCy keyphrase extraction
+- [ ] 04-03-PLAN.md — Unsupervised topic models (LDA + BERTopic)
+- [ ] 04-04-PLAN.md — CorEx + model persistence + CSV export for Phase 5
 
+---
 ### Phase 5: Labeling, Ranking & Visualization
 **Goal:** Label all reviews with aspect and sentiment, rank products per aspect, create bar charts.
 
