@@ -15,7 +15,7 @@ progress:
 # Project State: AIT303 Assignment 1
 
 > **Last updated:** 2026-05-31
-> **Status:** Executing Phase 04 (notebook complete — ready for Colab execution)
+> **Status:** Phase 04 complete — all 4 plans executed. Notebook ready for Colab run.
 
 ## Project Reference
 
@@ -132,7 +132,7 @@ See: .planning/PROJECT.md (updated 2025-05-26)
 ## Next Actions
 
 1. ~~**Phase 4 (Aspect Extraction):** Execute 4 plans (04-01 through 04-04)~~ ✓ Complete
-2. **🏷️ PENDING — Run Phases 1-4 notebooks on Colab:**
+2. **Run Phases 1-4 notebooks on Colab:** (needed to generate real model files)
    - `sentiment_analysis_preprocessing.ipynb` — already verified via nbconvert, good to run
    - `svm_sentiment_models.ipynb` — re-run with `max_iter=5000` for CountVectorizer convergence
    - `bigru_sentiment_models.ipynb` — full 48-cell run on T4 GPU (~60-90 min)
