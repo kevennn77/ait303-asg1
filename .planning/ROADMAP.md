@@ -133,6 +133,9 @@
 
 **Dependencies:** Phase 3 (best sentiment model), Phase 4 (aspect models)
 
+**Plans:**
+- [x] 05-01-PLAN.md — Product ranking notebook with sentiment labeling, scoring, visualization, and best product selection
+
 ---
 
 ### Phase 6: Report & Deliverables
@@ -183,11 +186,11 @@
 | ABSA-05 | Phase 4 | Complete |
 | ABSA-06 | Phase 4 | Complete |
 | ABSA-07 | Phase 4 | Complete |
-| ABSA-08 | Phase 5 | Pending |
-| ABSA-09 | Phase 5 | Pending |
-| ABSA-10 | Phase 5 | Pending |
-| VIZ-01 | Phase 5 | Pending |
-| VIZ-02 | Phase 5 | Pending |
+| ABSA-08 | Phase 5 | Complete |
+| ABSA-09 | Phase 5 | Complete |
+| ABSA-10 | Phase 5 | Complete |
+| VIZ-01 | Phase 5 | Complete |
+| VIZ-02 | Phase 5 | Complete |
 | RPT-01 to RPT-08 | Phase 6 | Pending |
 | CODE-01 to CODE-03 | Phase 1–6 | Pending |
 | DLVR-01 to DLVR-04 | Phase 6 | Pending |
