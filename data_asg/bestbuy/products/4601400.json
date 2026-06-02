@@ -1,0 +1,706 @@
+{
+  "sku": "4601400",
+  "name": "Beats Pill+",
+  "reviews": [
+    {
+      "title": "Beats Pill",
+      "text": "Amazing product loud and battery lasts for a very long time.",
+      "rating": 5,
+      "date": "2024-07-17T19:22:59.000-05:00",
+      "author": "ManuelaA"
+    },
+    {
+      "title": "Beats Pill",
+      "text": "Great sound quality. Would Recommend. Had for multiple years now.",
+      "rating": 4,
+      "date": "2024-06-23T23:34:57.000-05:00",
+      "author": "Lew44"
+    },
+    {
+      "title": "7 years later",
+      "text": "I've had this speaker 7 years now, no issues, EVER. Only now in 2023 the power button is showing ware. Love it!",
+      "rating": 5,
+      "date": "2023-10-23T12:43:27.000-05:00",
+      "author": "Kiaya"
+    },
+    {
+      "title": "Excellent product",
+      "text": "Sound quality is great. Pairs really easily to my computer.",
+      "rating": 5,
+      "date": "2023-07-21T17:11:21.000-05:00",
+      "author": "Billy"
+    },
+    {
+      "title": "Great speaker",
+      "text": "Amazing sound as always from beats. The bass is my favorite part",
+      "rating": 5,
+      "date": "2023-05-15T12:43:27.000-05:00",
+      "author": "MichaelA"
+    },
+    {
+      "title": "Sounds amazing",
+      "text": "Great sounding portable Bluetooth speaker. Easy to connect your iPhone.",
+      "rating": 5,
+      "date": "2023-05-14T12:25:25.000-05:00",
+      "author": "Hipgal"
+    },
+    {
+      "title": "Best Portable Speaker",
+      "text": "Best portable speaker for the poolside, studying, and working.\n\nNot the highest sound quality but I like the way it sounds and the bass it offers",
+      "rating": 5,
+      "date": "2023-05-08T12:05:20.000-05:00",
+      "author": "mattmlk"
+    },
+    {
+      "title": "Beats pill",
+      "text": "I love the beats pill, the sound, and the base are excellent",
+      "rating": 5,
+      "date": "2022-10-28T17:21:42.000-05:00",
+      "author": "DennisD"
+    },
+    {
+      "title": "Love it",
+      "text": "Perfect size, great sound, no complaints I really satisfied with my purchase",
+      "rating": 5,
+      "date": "2022-08-20T09:23:19.000-05:00",
+      "author": "Rosario"
+    },
+    {
+      "title": "Good sound quality",
+      "text": "I have this for a while now and it’s still working great.",
+      "rating": 5,
+      "date": "2022-06-14T03:31:11.000-05:00",
+      "author": "Tyna"
+    },
+    {
+      "title": "Long lasting great product",
+      "text": "Love beats pill speaker! I have like 6 years with it and works awesome! Long lasting battery. Awesome clear sound.",
+      "rating": 5,
+      "date": "2022-02-22T13:10:51.000-06:00",
+      "author": "Jessbeat66577"
+    },
+    {
+      "title": "Wireless speaker",
+      "text": "Sound is great just wish battery lasted longer. Good wireless speaker",
+      "rating": 4,
+      "date": "2022-02-04T16:02:40.000-06:00",
+      "author": "Crystal"
+    },
+    {
+      "title": "Perfect for bathroom",
+      "text": "I use this in my bathroom and it's perfect, it's good quality",
+      "rating": 5,
+      "date": "2022-01-29T02:15:23.000-06:00",
+      "author": "Bleuwolf"
+    },
+    {
+      "title": "Another great buy",
+      "text": "Love this speaker ...sounds really great. \nHope there is new version coming up soon ...",
+      "rating": 5,
+      "date": "2022-01-13T18:30:02.000-06:00",
+      "author": "WolfTech"
+    },
+    {
+      "title": "Use at the Beach or anywhere outside",
+      "text": "Wonderful product so easy to use with the iPhone and take it everywhere.  It also charges anywhere you have an iPhone charge.  Plus the sound is very high quality and very loud.  Use for the beach and anywhere outside",
+      "rating": 5,
+      "date": "2021-12-17T12:36:23.000-06:00",
+      "author": "flaveaga"
+    },
+    {
+      "title": "A-",
+      "text": "Great to have camping! Great sound, surprisingly deep bass, and solid size.",
+      "rating": 5,
+      "date": "2021-12-12T20:09:02.000-06:00",
+      "author": "ders19"
+    },
+    {
+      "title": "Speakers",
+      "text": "Nice clear sound . Easy to use. Love that you can connect with laptop and also use Bluetooth",
+      "rating": 5,
+      "date": "2021-12-10T21:26:51.000-06:00",
+      "author": "Bae1"
+    },
+    {
+      "title": "Music",
+      "text": "Sturdy speaker and very loud and durable , I enjoy taking this thing anywhere !",
+      "rating": 4,
+      "date": "2021-12-03T16:48:28.000-06:00",
+      "author": "Solid"
+    },
+    {
+      "title": "Bluetooth",
+      "text": "I love my beat pill has great sound easy to operate.",
+      "rating": 5,
+      "date": "2021-11-26T17:29:52.000-06:00",
+      "author": "RERE"
+    },
+    {
+      "title": "Great Use",
+      "text": "This is the ultimate compact party machine sounds fantastic",
+      "rating": 5,
+      "date": "2021-11-17T04:06:43.000-06:00",
+      "author": "Sully"
+    },
+    {
+      "title": "Good sound",
+      "text": "Good quality Beats sound - love portability, option settings and great for small gatherings.",
+      "rating": 5,
+      "date": "2021-11-01T18:09:17.000-05:00",
+      "author": "Jaxy"
+    },
+    {
+      "title": "Good portable speaker",
+      "text": "Speaker has amazing sound quality and a great battery life",
+      "rating": 4,
+      "date": "2021-10-08T15:15:07.000-05:00",
+      "author": "Bman"
+    },
+    {
+      "title": "HustlemannInc",
+      "text": "Nice buy. I really Love this purchase and will recommend this purchase to anybody and all my friends Best Buy is a good store to purchase electronics thank you",
+      "rating": 5,
+      "date": "2021-09-17T18:42:03.000-05:00",
+      "author": "Hustlemann"
+    },
+    {
+      "title": "Surround Sound",
+      "text": "I love my Beats Pill, it fills the room and you can take it anywhere!",
+      "rating": 5,
+      "date": "2021-09-12T09:51:54.000-05:00",
+      "author": "JNicole02"
+    },
+    {
+      "title": "Great price for great stuff",
+      "text": "I love the Best Buy sales discount, never be beaten",
+      "rating": 5,
+      "date": "2021-09-08T16:04:49.000-05:00",
+      "author": "Colin"
+    },
+    {
+      "title": "Chase",
+      "text": "I love this beat pill music so loud and it’s such a great buy. Would buy again",
+      "rating": 5,
+      "date": "2021-08-28T23:05:51.000-05:00",
+      "author": "Chase"
+    },
+    {
+      "title": "Not only I but everyone loves the pill!",
+      "text": "Absolutely love this device. Clearly other people do also because I have purchased two of them. Yes, they stole two. Now I have none. Sure do miss that pill.",
+      "rating": 5,
+      "date": "2021-08-20T16:15:34.000-05:00",
+      "author": "ThinklikeaG"
+    },
+    {
+      "title": "Portable Beats speaker",
+      "text": "I brought this for my teenage daughter and she Loves It . Great Sound and it’s loud enough for her. She takes it everywhere.",
+      "rating": 5,
+      "date": "2021-08-18T03:52:58.000-05:00",
+      "author": "Samantha"
+    },
+    {
+      "title": "Love!",
+      "text": "Excellent, compact, sounds great, battery last longer than previous one I had . (Had it for over 5 years and still sounded great b4 it was stolen)",
+      "rating": 5,
+      "date": "2021-08-15T14:42:02.000-05:00",
+      "author": "PerezB"
+    },
+    {
+      "title": "Beats",
+      "text": "Very good sound, and very loud I’ve had it since last year",
+      "rating": 5,
+      "date": "2021-08-11T02:07:50.000-05:00",
+      "author": "Beats"
+    },
+    {
+      "title": "Short life",
+      "text": "After three and a half years, this speaker got dead. Without being plugged, it got off. I don't have a 5 year plan, so it was not a good experience with this product.",
+      "rating": 1,
+      "date": "2021-08-02T21:38:12.000-05:00",
+      "author": "Elena"
+    },
+    {
+      "title": "love this speaker",
+      "text": "love this wireless speaker, its loud enough for me to enjoy my music even when i'm in the back room of my apartment",
+      "rating": 5,
+      "date": "2021-07-31T10:34:38.000-05:00",
+      "author": "PrettyDYM"
+    },
+    {
+      "title": "Good.",
+      "text": "Good product and works just as expected. No problems.",
+      "rating": 5,
+      "date": "2021-07-30T17:49:11.000-05:00",
+      "author": "JimB"
+    },
+    {
+      "title": "Great buy",
+      "text": "Got this for my daughter who always has her music on sounds great and last most the day for her very happy with it will buy my other daughter one soon",
+      "rating": 5,
+      "date": "2021-07-24T01:45:51.000-05:00",
+      "author": "SDROD"
+    },
+    {
+      "title": "great but heavy",
+      "text": "Yea these speakers really be hitting loud af the only issue is that it weighs a ton. like its a bit too heavy for me but i still like em.",
+      "rating": 5,
+      "date": "2021-07-21T07:36:05.000-05:00",
+      "author": "Jay123"
+    },
+    {
+      "title": "Good speaker here.",
+      "text": "If with Apple at realm, as always beats doesn’t disappoint. Although I do think it should be a little louder, it does the trick.",
+      "rating": 5,
+      "date": "2021-07-15T12:28:28.000-05:00",
+      "author": "bigsnowstorm"
+    },
+    {
+      "title": "beats",
+      "text": "love the speaker great sound and bass very long battery life depending on how loud you play the speaker at",
+      "rating": 5,
+      "date": "2021-07-14T22:21:10.000-05:00",
+      "author": "Cisco"
+    },
+    {
+      "title": "Beats Pill",
+      "text": "Great portable speaker! Love the bass and how loud it gets. The battery life is phenomenal as well.",
+      "rating": 5,
+      "date": "2021-07-07T10:42:15.000-05:00",
+      "author": "Kenny"
+    },
+    {
+      "title": "So good",
+      "text": "Amazing sound crazy battery and reverse charges iphones and ipads",
+      "rating": 5,
+      "date": "2021-06-12T17:57:56.000-05:00",
+      "author": "Jay1"
+    },
+    {
+      "title": "Great gift",
+      "text": "I brought this pill as a gift for my sister for her 30th birthday and she loves it. Has great sound and long battery",
+      "rating": 5,
+      "date": "2021-06-11T20:37:52.000-05:00",
+      "author": "Lydiasmom"
+    },
+    {
+      "title": "Small Size, Big Sound!",
+      "text": "Easy set-up.  Good quality sound for it’s size & price.  Can be used with any electronic device.",
+      "rating": 5,
+      "date": "2021-06-08T09:30:37.000-05:00",
+      "author": "Lynn60"
+    },
+    {
+      "title": "Excellent Bluetooth",
+      "text": "Great product! The sun quality is awesome and it is easy to use. Plus nice to be able to charge on my go.",
+      "rating": 5,
+      "date": "2021-06-05T00:27:26.000-05:00",
+      "author": "Mark"
+    },
+    {
+      "title": "Great Speaker",
+      "text": "Love this speaker. Bought it open-box and it looked like new. Sound is good and loud. Feels very good and a bit heavy. Built to last. For the open box price, it's well worth it.",
+      "rating": 4,
+      "date": "2021-05-31T19:21:03.000-05:00",
+      "author": "Joel"
+    },
+    {
+      "title": "Wireless",
+      "text": "This is a good quality speaker. Its loud when you need.  The only thing I dislike is people can't hear if they call you.",
+      "rating": 5,
+      "date": "2021-05-26T03:24:37.000-05:00",
+      "author": "Sharm"
+    },
+    {
+      "title": "Good for the price although there is not much bass",
+      "text": "Good for the price although there is not much bass",
+      "rating": 5,
+      "date": "2021-05-25T17:36:53.000-05:00",
+      "author": "Junkproduct"
+    },
+    {
+      "title": "Beat pill+",
+      "text": "Love this item- speaker works great- very clear in sound",
+      "rating": 5,
+      "date": "2021-05-21T23:29:36.000-05:00",
+      "author": "DarC"
+    },
+    {
+      "title": "great product",
+      "text": "great product. sound clarity is very good and stays charged for an extended period",
+      "rating": 5,
+      "date": "2021-05-21T16:39:46.000-05:00",
+      "author": "Jwill14"
+    },
+    {
+      "title": "Great quality & Sound!",
+      "text": "This pill + speaker is small but very powerful. We use it for everything. Great quality and sound!",
+      "rating": 5,
+      "date": "2021-05-19T22:32:29.000-05:00",
+      "author": "DJB84"
+    },
+    {
+      "title": "Not worth it",
+      "text": "Not even loud batteries dies quick jbl speakers are louder",
+      "rating": 1,
+      "date": "2021-05-18T12:58:47.000-05:00",
+      "author": "Jackiege9420"
+    },
+    {
+      "title": "Love it!!!",
+      "text": "I had a Bose speaker but it wasn’t quite what I wanted so I tried this speaker and it totally satisfied my wants of a loud portable speaker! The sound is so clear and crisp even when I have the volume all the way up.",
+      "rating": 5,
+      "date": "2021-05-17T10:32:37.000-05:00",
+      "author": "Caya"
+    },
+    {
+      "title": "Beats Pill",
+      "text": "This is my favorite portable Bluetooth speaker. Looks and sounds great. Beats have quality products.",
+      "rating": 5,
+      "date": "2021-05-15T14:32:19.000-05:00",
+      "author": "7ethridge"
+    },
+    {
+      "title": "Best Impulse Buy",
+      "text": "I honestly use this everywhere. It has a lot of bass and it’s quite loud to the point you would think it’s coming from across the street. I hardly ever have to charge it! 10/10 would buy again!",
+      "rating": 5,
+      "date": "2021-05-14T18:58:05.000-05:00",
+      "author": "Skye"
+    },
+    {
+      "title": "Beats Pill",
+      "text": "It sounds amazing when I watch Netflix on my iPad I have to connect the pill",
+      "rating": 5,
+      "date": "2021-05-14T15:56:51.000-05:00",
+      "author": "Ernie"
+    },
+    {
+      "title": "Bluetooth",
+      "text": "Not bad for the price I just enjoy my music louder",
+      "rating": 5,
+      "date": "2021-05-07T18:23:36.000-05:00",
+      "author": "DavidLivingston13"
+    },
+    {
+      "title": "Wont work with Samsung",
+      "text": "wont work with my Samsung, even after downloading the app.\nSucks to have to have an app to connect to blue tooth.\nLooks nice in the closet.",
+      "rating": 1,
+      "date": "2021-05-07T16:08:22.000-05:00",
+      "author": "whatahassle"
+    },
+    {
+      "title": "Best value",
+      "text": "Great value for your money I used it for work and I love it",
+      "rating": 5,
+      "date": "2021-05-07T15:53:40.000-05:00",
+      "author": "Kaystew"
+    },
+    {
+      "title": "Dammy",
+      "text": "Very lovely and good for outdoor with perfect sound",
+      "rating": 5,
+      "date": "2021-05-07T15:30:21.000-05:00",
+      "author": "ddmmyrajitola"
+    },
+    {
+      "title": "My sweet sounding system",
+      "text": "I love it.Music sounds good and clear.Has a little bass to it.I just love the size it’s the right fit and sound for my bedroom.I play my favorite songs on a regular basis now.",
+      "rating": 5,
+      "date": "2021-04-30T20:22:14.000-05:00",
+      "author": "Bluebell"
+    },
+    {
+      "title": "Bluetooth speaker",
+      "text": "Definitely one of the better sounding speakers out there. Lots of bass. Easy connection  to devices and stays charged for awhile.",
+      "rating": 5,
+      "date": "2021-04-30T18:06:26.000-05:00",
+      "author": "Ninja"
+    },
+    {
+      "title": "High Quality",
+      "text": "Excellent sound and long batter life. This is a solid bluetooth speaker.",
+      "rating": 5,
+      "date": "2021-04-30T16:50:04.000-05:00",
+      "author": "Frank"
+    },
+    {
+      "title": "Great Speaker",
+      "text": "This is my first beats speaker. It was easy to setup and use. The sound that comes from it is clear.",
+      "rating": 5,
+      "date": "2021-04-30T15:49:22.000-05:00",
+      "author": "KymBur"
+    },
+    {
+      "title": "Great speaker",
+      "text": "Sounds great, excellent noise and very durable. Also great battery life.",
+      "rating": 5,
+      "date": "2021-04-30T15:41:34.000-05:00",
+      "author": "32991"
+    },
+    {
+      "title": "Not a single complaint",
+      "text": "It was quite a challenge to get my hands on this speaker but man, was it worth it. It’s easy to connect to my devices & the sound on it is amazing. Its size makes it convenient to put it in my backpack & take it everywhere with me. Overall, the speaker is amazing.",
+      "rating": 5,
+      "date": "2021-04-25T04:46:01.000-05:00",
+      "author": "SummerMaddness6"
+    },
+    {
+      "title": "Speaker",
+      "text": "Has a great sound and good quality for any time party or just listen to music",
+      "rating": 5,
+      "date": "2021-04-24T14:47:05.000-05:00",
+      "author": "Lenovo"
+    },
+    {
+      "title": "Loud speaker",
+      "text": "Beats earphones suck and never last long but their speakers are actually decent. We really like this one.",
+      "rating": 5,
+      "date": "2021-04-24T12:33:00.000-05:00",
+      "author": "Haidz"
+    },
+    {
+      "title": "Great price!",
+      "text": "Great sound. I bought two! Easy for the whole family to link their phones to and play each playlist.",
+      "rating": 5,
+      "date": "2021-04-24T10:16:07.000-05:00",
+      "author": "NickJ"
+    },
+    {
+      "title": "very loud",
+      "text": "Glad I purchased this. It's very loud and I can take it with me anywhere. I love it!",
+      "rating": 5,
+      "date": "2021-04-21T09:51:51.000-05:00",
+      "author": "geelan"
+    },
+    {
+      "title": "Good",
+      "text": "Really good product and good sounds one of the best purchases I have made",
+      "rating": 5,
+      "date": "2021-04-20T10:42:31.000-05:00",
+      "author": "oscar"
+    },
+    {
+      "title": "BEATS PILL",
+      "text": "Fascinating, beautiful, beautiful sound, practical, ideal to take it wherever you want.",
+      "rating": 5,
+      "date": "2021-04-19T11:11:24.000-05:00",
+      "author": "Giovanna"
+    },
+    {
+      "title": "Speaker",
+      "text": "The speaker was a great gift for my daughter. She loves it.",
+      "rating": 4,
+      "date": "2021-04-17T09:35:37.000-05:00",
+      "author": "Hank"
+    },
+    {
+      "title": "Pill",
+      "text": "My daughter loves this , I bought her one for Christmas and she uses it all the time",
+      "rating": 5,
+      "date": "2021-04-16T17:53:17.000-05:00",
+      "author": "Pookey"
+    },
+    {
+      "title": "beats is # 1",
+      "text": "I have a game/bedroom and having this is like adding the finishing touches to my room",
+      "rating": 5,
+      "date": "2021-04-16T16:03:03.000-05:00",
+      "author": "Sammyayto"
+    },
+    {
+      "title": "Love my beats",
+      "text": "Crisp sound and great for the beach back yard and anywhere else u want music. Easy to use Bluetooth connection",
+      "rating": 5,
+      "date": "2021-04-12T09:10:35.000-05:00",
+      "author": "teddy"
+    },
+    {
+      "title": "Great speaker",
+      "text": "This speaker is shoulders above the rest. It has great quality sound.",
+      "rating": 5,
+      "date": "2021-04-11T21:20:58.000-05:00",
+      "author": "TooReal"
+    },
+    {
+      "title": "Pilling music!",
+      "text": "High quality & sound! Very happy with my purchase and would highly recommend this product to anyone looking for a blue tooth speaker that sounds awesome!",
+      "rating": 5,
+      "date": "2021-04-10T14:37:04.000-05:00",
+      "author": "PERFECT"
+    },
+    {
+      "title": "Let’s be honest",
+      "text": "This is a great speaker for an apple user, as myself, but the reality is the speaker doesn’t do as much justice as JBL or BOSE. Dr. Dre has is name on it and that’s what makes it worth money. If you want Sound quality and base look elsewhere.",
+      "rating": 2,
+      "date": "2021-04-10T13:24:34.000-05:00",
+      "author": "Trajan20"
+    },
+    {
+      "title": "Still bumping",
+      "text": "Loud sounds from such a small speaker. It’s no B&W or Bang but it works as advertised. I seems to be a bit base heavy but hey I think that’s what most kids are expecting these days. I use to be into heavy base for a bit but now I prefer a quality tone so I can see which demographic is targeted with this product. It’s fair for the price and the quality is good. Haven’t had any issues yet with an single part.",
+      "rating": 5,
+      "date": "2021-04-09T21:18:17.000-05:00",
+      "author": "Will"
+    },
+    {
+      "title": "Beats Pill+",
+      "text": "I bought this for a trip to Florida.  It came in great for the pool and the beach.  Works great with iPhone.  Not sure if I would of bought it at full price.  Great sale price.",
+      "rating": 5,
+      "date": "2021-04-09T16:27:43.000-05:00",
+      "author": "Tjbutler"
+    },
+    {
+      "title": "Good quality",
+      "text": "It a good speaker. Has bass it just perfect and battery last",
+      "rating": 5,
+      "date": "2021-04-08T18:15:43.000-05:00",
+      "author": "Neal"
+    },
+    {
+      "title": "The Best!!!",
+      "text": "Great!!! Sounds great and loud. I use it when I am in the shower or for my photoshoots. This thing rocks.",
+      "rating": 5,
+      "date": "2021-04-04T18:15:36.000-05:00",
+      "author": "InstantBuyer"
+    },
+    {
+      "title": "Speaker",
+      "text": "This was a gift for my husband. He is so I love with the speaker. He uses it everyday. Sound quality is great.",
+      "rating": 5,
+      "date": "2021-04-02T23:48:18.000-05:00",
+      "author": "AngieA"
+    },
+    {
+      "title": "Best speaker",
+      "text": "So far best speaker on the market Loud and clear sound I like it",
+      "rating": 5,
+      "date": "2021-03-29T06:54:19.000-05:00",
+      "author": "Wassim"
+    },
+    {
+      "title": "Beat pill",
+      "text": "Real boom for such a small product I carry it everywhere",
+      "rating": 5,
+      "date": "2021-03-26T20:42:40.000-05:00",
+      "author": "Airfryer"
+    },
+    {
+      "title": "Speaker for the Phones",
+      "text": "This is a cool speaker. I can wait to try it out soon, as I get it back.",
+      "rating": 5,
+      "date": "2021-03-26T16:02:15.000-05:00",
+      "author": "Work"
+    },
+    {
+      "title": "Great portable wifi speaker",
+      "text": "Awesome sound. Very sleek. Love it. Highly recommend!",
+      "rating": 5,
+      "date": "2021-03-20T15:32:42.000-05:00",
+      "author": "DariaC"
+    },
+    {
+      "title": "Awesome speaker",
+      "text": "Great sound, long battery life and quick charging.",
+      "rating": 5,
+      "date": "2021-03-19T19:10:33.000-05:00",
+      "author": "MaxHawes"
+    },
+    {
+      "title": "So much sound in a lil package",
+      "text": "Excellent sound quality! Easy to setup/pair the bluetooth with my phone",
+      "rating": 5,
+      "date": "2021-03-19T18:01:37.000-05:00",
+      "author": "Lashaun"
+    },
+    {
+      "title": "decent",
+      "text": "Built great. Sturdy. But sometimes it's loud and sometimes it doesn't get as loud. Even resetting doesn't fix it.",
+      "rating": 3,
+      "date": "2021-03-19T15:44:03.000-05:00",
+      "author": "Woody"
+    },
+    {
+      "title": "Love it",
+      "text": "Sounds great nice looking good quality clear sound .",
+      "rating": 5,
+      "date": "2021-03-17T12:04:55.000-05:00",
+      "author": "Adri"
+    },
+    {
+      "title": "Beats is the best",
+      "text": "I love it. The sound is great and it works lovely with me Iphone",
+      "rating": 5,
+      "date": "2021-03-17T09:47:44.000-05:00",
+      "author": "Shajones"
+    },
+    {
+      "title": "Beats Pill+",
+      "text": "It does the job. Their are others that  are a little louder or had a slightly better review but teenagers identify with the name. My son is happy with it....",
+      "rating": 5,
+      "date": "2021-03-12T17:02:48.000-06:00",
+      "author": "RoadDog223"
+    },
+    {
+      "title": "Beats",
+      "text": "Great sound , Bluetooth easy to used. Good  product",
+      "rating": 5,
+      "date": "2021-03-05T16:07:58.000-06:00",
+      "author": "Moussignac79"
+    },
+    {
+      "title": "Great speaker",
+      "text": "My hunny loves it comes in handy. Great sound. Ease of use.",
+      "rating": 5,
+      "date": "2021-03-05T15:44:23.000-06:00",
+      "author": "Controller"
+    },
+    {
+      "title": "Beats Pill",
+      "text": "I honestly haven’t used this product, but it sure is boxed up pretty good with high quality boxing material.",
+      "rating": 5,
+      "date": "2021-03-05T15:41:35.000-06:00",
+      "author": "Edgar93"
+    },
+    {
+      "title": "Loud!  Great low end",
+      "text": "Really great speaker that gets really loud.  Bought this to practice my mixing!",
+      "rating": 5,
+      "date": "2021-02-26T19:23:02.000-06:00",
+      "author": "Edwin"
+    },
+    {
+      "title": "Beast by Dre pill",
+      "text": "The beast work great highly recommended they are laud enough and the quality and bass is pretty good and amazing.",
+      "rating": 5,
+      "date": "2021-02-25T23:23:47.000-06:00",
+      "author": "Alberto"
+    },
+    {
+      "title": "Nater2244",
+      "text": "I like it but I just haven't gotten a chance to open it up yet",
+      "rating": 4,
+      "date": "2021-02-24T05:02:13.000-06:00",
+      "author": "Nater"
+    },
+    {
+      "title": "Base Sounds Great",
+      "text": "Love the sound. Uses it everyday in my classroom with my class..this my 2nd one, gave first one to my grandson, to take to college with him...",
+      "rating": 5,
+      "date": "2021-02-19T17:21:56.000-06:00",
+      "author": "NannaTheTeacher37"
+    },
+    {
+      "title": "Fans of Beats won’t be disappointed",
+      "text": "Bought this as a gift for a friend whose always wanted one and it exceeds expectations, it was a bit more costly than other speakers but it definitely performs.  It sounds great and is loud, it also works good for calls",
+      "rating": 5,
+      "date": "2021-02-19T16:03:04.000-06:00",
+      "author": "Larry"
+    },
+    {
+      "title": "If you have the money, buy it.",
+      "text": "Honestly I don’t know why people are complaining about sound quality and how loud the speaker actually is. I have it at the second lowest volume preset and if I go any louder it’ll start being too loud for my current location. If you have the money and like it buy it. If you want to buy it for an aesthetic of having Apple devices then do it. It’s worth the money. JBL, Sony and Bose are good as well, out of those 3 only Sony really compares to the beats in my opinion. But it if you want it.",
+      "rating": 5,
+      "date": "2021-02-18T11:41:30.000-06:00",
+      "author": "Artic"
+    }
+  ]
+}

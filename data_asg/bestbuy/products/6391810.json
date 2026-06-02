@@ -1,0 +1,510 @@
+{
+  "sku": "6391810",
+  "name": "Marshall Stanmore II",
+  "reviews": [
+    {
+      "title": "Treadmill is already shaking",
+      "text": "Treadmill is already shaking and doesn't look like it would hold up, this warranty is needed",
+      "rating": 5,
+      "date": "2026-05-30T18:46:35.000-05:00",
+      "author": "Duvalll"
+    },
+    {
+      "title": "Gym equipment",
+      "text": "Have those equipment for 2 years, no issues and is very easy to set up. I love it",
+      "rating": 5,
+      "date": "2026-03-06T11:36:44.000-06:00",
+      "author": "FranciscoG"
+    },
+    {
+      "title": "5-year Geek Squad Protection",
+      "text": "[Employee of bestbuy] It gives you a lot of peace of mind when you’re buying something pricey. You can easily add it when you check out, and it clearly tells you what’s included. It’s great to know that you can get repairs or a replacement if something breaks down later on. It’s definitely worth it for long-term protection on those big-ticket items.",
+      "rating": 5,
+      "date": "2026-02-28T10:01:25.000-06:00",
+      "author": "TechGuyB"
+    },
+    {
+      "title": "the best",
+      "text": "its nice thes best machine to walk and runing i loved",
+      "rating": 5,
+      "date": "2026-01-02T14:42:20.000-06:00",
+      "author": "OrfanelR"
+    },
+    {
+      "title": "Geek squad protection.",
+      "text": "To new to review.  MY Washer isn't even a year old. Only time will tell.",
+      "rating": 5,
+      "date": "2026-01-02T10:29:29.000-06:00",
+      "author": "Mystove"
+    },
+    {
+      "title": "Peace of Mind",
+      "text": "Worth it every time. It's peace of mind and a great way to protect your purchase.",
+      "rating": 5,
+      "date": "2025-11-30T13:28:20.000-06:00",
+      "author": "JoshT"
+    },
+    {
+      "title": "Geek products",
+      "text": "The products were excellent and what I wanted. Big thumbs up:)",
+      "rating": 5,
+      "date": "2025-11-30T10:43:18.000-06:00",
+      "author": ""
+    },
+    {
+      "title": "Helpful plan with a few things to watch for",
+      "text": "I bought the 3-Year Standard Geek Squad Protection for my treadmill. I’ve used this plan before with other workout equipment, and it really has helped me in the past. Best Buy has always taken care of the repair or replacement once the plan is active, which gives me peace of mind since I use my treadmill every day.\n\nThere are a few things to keep in mind. Even though you buy a 3-year plan, it doesn’t start until the manufacturer’s warranty ends. I had a treadmill in the past with very poor support from the manufacturer, and Best Buy couldn’t step in until that warranty was over. That part was frustrating because I felt stuck for a while.\n\nOnce the Geek Squad plan kicked in, I still had some trouble getting clear answers. I spoke with many different customer service reps, and a lot of them gave me different information. It took a while before I reached someone who understood the issue and helped me move forward. When the right person steps in, the service is great, but getting there can take patience.\n\nOne more thing to note is that once you use the protection plan for a replacement, the plan is considered fulfilled. If that happens early in the coverage period, you lose the remaining time.\n\nEven with those challenges, I still feel the plan has good value, especially for fitness equipment that takes daily wear and tear. I would recommend it, as long as you know what to expect.",
+      "rating": 4,
+      "date": "2025-11-12T22:07:50.000-06:00",
+      "author": "Eric"
+    },
+    {
+      "title": "Extraordinaire",
+      "text": "Equipment may break or have electrcal gremlins.  A true benefit (value/peace of mind) for the relatively small expense.",
+      "rating": 5,
+      "date": "2021-06-18T17:30:17.000-05:00",
+      "author": "M4rk"
+    },
+    {
+      "title": "Warranty",
+      "text": "Gotta protect the investment for power surges because it is bot cover if you do not have it. Better have it and enjoy it.",
+      "rating": 5,
+      "date": "2021-06-18T16:05:40.000-05:00",
+      "author": "PatientMan"
+    },
+    {
+      "title": "Good insurance",
+      "text": "I am happy to have the 5 year protection plan.  It was a bit pricey, but I feel safer knowing I have it.",
+      "rating": 4,
+      "date": "2021-06-11T17:36:28.000-05:00",
+      "author": "ddodge"
+    },
+    {
+      "title": "Like geek squad Installation and protection",
+      "text": "Geek squad installation protection for my devices is on of the reasons I buy my technology from Best Buy — in this case exercise bike which I could have also gotten from Sears or Nordic track directly.",
+      "rating": 5,
+      "date": "2021-06-05T11:35:58.000-05:00",
+      "author": "SkepticalWV"
+    },
+    {
+      "title": "Go Geeks",
+      "text": "Hopefully I’ll never need to use the 3 year extended warranty, but the price was reasonable.",
+      "rating": 4,
+      "date": "2021-06-04T17:34:49.000-05:00",
+      "author": "FamiliarFace"
+    },
+    {
+      "title": "This is an outdated 2017 model!",
+      "text": "Very disappointed they are selling the 2017 model when the 2021 model is the same price has has a lot of enhancements over the 2017 model. The 2021 model is easily available.",
+      "rating": 1,
+      "date": "2021-05-22T17:50:22.000-05:00",
+      "author": "JayFitness"
+    },
+    {
+      "title": "Junk",
+      "text": "I do not recommend. Purchased this treadmill in September and it broke in December. Instead of replacing it for a new device I have been waiting for parts and a service technician to come repair the treadmill for 5 months. I have a brand new treadmill which was only unusable for 3 months and has been sitting in my house for 5 months.",
+      "rating": 1,
+      "date": "2021-05-12T08:44:34.000-05:00",
+      "author": "Dancy"
+    },
+    {
+      "title": "Not worth the money",
+      "text": "Not sure why I purchased Geek Squad.  When asking about help with an electronic issue I was told to call the manufacturer.  Informed that Geek Squad deals with install and scheduling.  However, I was told during delivery that Geek Squad does not do installation for the NordicTrack Infusion CST so why did it allow me to purchase the plan??",
+      "rating": 1,
+      "date": "2021-05-05T16:44:24.000-05:00",
+      "author": "Aaroardon"
+    },
+    {
+      "title": "Great Value",
+      "text": "Great value for a five year warranty for the row machine I purchased. Under $100 spent on an investment I’m sure I’ll be using.",
+      "rating": 5,
+      "date": "2021-05-02T22:16:24.000-05:00",
+      "author": "housedogg"
+    },
+    {
+      "title": "Geek Squad!",
+      "text": "Geek squad is great! I definitely recommend geek squad for all your Best Buy purchases!",
+      "rating": 5,
+      "date": "2021-04-28T12:19:36.000-05:00",
+      "author": "Christian"
+    },
+    {
+      "title": "Geek squad recommended",
+      "text": "Definitely recommend geek squad and purchasing a geek squad protection plan! The service is very helpful and you will not be disappointed!",
+      "rating": 5,
+      "date": "2021-04-28T12:18:17.000-05:00",
+      "author": "Christian"
+    },
+    {
+      "title": "I Will ALWAYS Buy Geek Squad Protection!",
+      "text": "I buy GSP on everything. It’s the best store protection out there and although some of the protection is pricey, it’s worth it when the item in question is pricey. If it’s not something that’s instantly replaced, it’s something that they will try and fix and replace it however they can. Excellent protection!",
+      "rating": 5,
+      "date": "2021-04-24T09:15:16.000-05:00",
+      "author": "AbigailWasHere"
+    },
+    {
+      "title": "Exercise equipment",
+      "text": "Great to have. So far seems to not have problem with equipment.",
+      "rating": 5,
+      "date": "2021-04-23T16:55:09.000-05:00",
+      "author": "Punkin"
+    },
+    {
+      "title": "Peace of mind",
+      "text": "Haven’t had to use it yet, but I feel reassured in my purchase.",
+      "rating": 5,
+      "date": "2021-04-23T16:38:03.000-05:00",
+      "author": "Lindsay"
+    },
+    {
+      "title": "Great warranty option",
+      "text": "Great to protect your purchase hassle free and cheap",
+      "rating": 5,
+      "date": "2021-04-23T16:15:43.000-05:00",
+      "author": "Rbreview"
+    },
+    {
+      "title": "Necessary purchase",
+      "text": "Considering the return window was only 15 days, and I plan on using the item a lot, I feel the extra protection was warranted.  Considering I’m already having Bluetooth issues, I think it was a worthwhile investment!",
+      "rating": 4,
+      "date": "2021-04-16T20:00:38.000-05:00",
+      "author": "DarthMomma"
+    },
+    {
+      "title": "Peace of mind",
+      "text": "This is a great deal for a warranty on a great device. I hope I never have to use it but have peace of mind because I have it.",
+      "rating": 5,
+      "date": "2021-04-16T15:45:56.000-05:00",
+      "author": "Nate"
+    },
+    {
+      "title": "HELP HELP HELP",
+      "text": "The Geeks are trained in runaround service! I've been trying to get this broken treadmill that was assembled wrong out of my house for 2wks!! Everyday I'm told I will get a Email sent to me, to have patience and NOTHING!!! What a waste of time and money. Huge Best Buy Dissatisfaction. I NEED HELP!!!! Someone contact me to get this treadmill out of my house.",
+      "rating": 1,
+      "date": "2021-04-12T23:18:37.000-05:00",
+      "author": "MadBetty"
+    },
+    {
+      "title": "Love geek",
+      "text": "Who wouldn’t want geek squad protection! It is a life saver and is always there to make you feel secure",
+      "rating": 5,
+      "date": "2021-04-08T11:45:10.000-05:00",
+      "author": "Crtz55"
+    },
+    {
+      "title": "Best buy warranty",
+      "text": "Totally recommend the warranty! Best price for 3 years!",
+      "rating": 5,
+      "date": "2021-04-06T00:30:48.000-05:00",
+      "author": "Treadmill"
+    },
+    {
+      "title": "Review",
+      "text": "Bought it to extend my treadmill warranty.  Haven’t used it yet but trust Best Buy’s product in the event I need to use it",
+      "rating": 5,
+      "date": "2021-04-02T16:22:54.000-05:00",
+      "author": "Jake"
+    },
+    {
+      "title": "Love Geek Squad",
+      "text": "Love their service! always there when needed! just a phone call away!",
+      "rating": 5,
+      "date": "2021-04-02T15:42:07.000-05:00",
+      "author": "Terri"
+    },
+    {
+      "title": "Always choose protection",
+      "text": "I always buy the protection on high dollar items. Best Buy consistently backs up their products! You never have to make the choice to go with someone else because they always match the price of any other seller.",
+      "rating": 5,
+      "date": "2021-03-27T14:28:47.000-05:00",
+      "author": "TreadmillMat"
+    },
+    {
+      "title": "Always get geek squad protection",
+      "text": "Geek squad protection is a great system. If it breaks, they fix it, or replace it. Simple!",
+      "rating": 5,
+      "date": "2021-03-26T21:59:28.000-05:00",
+      "author": ""
+    },
+    {
+      "title": "Extremely long hold and not actually 3 yr coverage",
+      "text": "I purchased the 3 year Geek Squad plan. When I called to get a new exercise bike repaired, I was told I needed to contact Nautilus. I spent over an hour on hold with the Geek Squad to be told this. They said they wouldn't cover it until the year warranty with Nautilus expired. I said does that mean that I paid for three years, but really only get two years? The representative said yes. Just be aware that this is the case. I have used Geek squad for a washer before and they were amazing. This has not been my experience with the exercise bike.",
+      "rating": 2,
+      "date": "2021-03-26T12:04:32.000-05:00",
+      "author": "Constance"
+    },
+    {
+      "title": "Great bike. Just a few nit picks",
+      "text": "We've had this bike for about a week so still learning to use it. It's not perfect but nothing ever. Overall we really like it so far. The only hiccup was a missing part. Customer support was very nice but informed me it was gong to take six weeks for them to get the part to us. It was a cosmetic piece so we can use the bike but six weeks to replace a part someone forgot to put in the box?\n\nPROS\n--------\n-The price is great\n-Solid construction\n-Built in speakers\n-Comfortable seat\n-The Explore the World app synch easily and gives you six free courses with beautiful scenery\n- Very Quiet\n- Smooth operation\n\nCONS\n---------\n-USB port charges a phone but not enough amps to charge an iPad\n-The bike has bluetooth out but not in so the built in speakers are not bluetooth capable\n-The USB charging port does not support audio so you need to use two cords if you want to play audio and charge at the same time - minor but why?\n-The seat is adjustable but slides forward very forcefully when unlocked. It takes a good amount of force to push it back up and lock it in place. Smaller people might have a little trouble with that. It really could use a spring or a piston to make adjustments easier and smoother.\n- Unable to synch with apps like Zwift or Rouvy but might be able to if a cadence sensor is purchased separately and attached to the pedals\n- The Explore the World app is nice but has very limited on screen info. Just distance and time but not cadence or resistance and the lower LCD screen that is still visible when an iPad is in the holder can not display cadence and resistance at the same time. They should fix one or the other.\n- The seat back is hard plastic with a strong lumbar curve. This can be uncomfortable if its not a good fit for your shape and size. It would be great if they offered a mesh back as an option.\n\nOverall its a great bike .The Cons I listed are mostly minor things and most of them are things they could fix pretty easily and inexpensively if they wanted to. The sliding seat is something that would require a bit of a redesign but they should look into that with the next upgrade because if you have multiple people using the bike and some are less muscular this could be annoying if not slightly hazardous.",
+      "rating": 4,
+      "date": "2021-03-21T19:26:21.000-05:00",
+      "author": "macgyver"
+    },
+    {
+      "title": "Treadmill",
+      "text": "Love it. Best treadmill I have ever had. I love the different programs built with in the treadmill.  I love being able to do different routines",
+      "rating": 5,
+      "date": "2021-03-17T08:12:53.000-05:00",
+      "author": "Murc"
+    },
+    {
+      "title": "Great",
+      "text": "Best Buy has the best service protection plans. This is the reason I buy my electronics here.",
+      "rating": 5,
+      "date": "2021-03-16T14:35:57.000-05:00",
+      "author": "KingC"
+    },
+    {
+      "title": "Protected",
+      "text": "Glad to be protected for this equipment that I just invested in",
+      "rating": 5,
+      "date": "2021-03-11T18:37:14.000-06:00",
+      "author": "Alex"
+    },
+    {
+      "title": "Great",
+      "text": "I purchased this for my mom as a added security and she really loves it.",
+      "rating": 5,
+      "date": "2021-03-07T08:46:30.000-06:00",
+      "author": ""
+    },
+    {
+      "title": "Hover board",
+      "text": "My kids absolutely love this . The lights the music",
+      "rating": 5,
+      "date": "2021-03-05T20:06:02.000-06:00",
+      "author": "Fatgreek"
+    },
+    {
+      "title": "Great",
+      "text": "Can’t ask for anything else. Best protection that money can buy. 10/10 recommend",
+      "rating": 5,
+      "date": "2021-03-05T15:34:05.000-06:00",
+      "author": "AppleF"
+    },
+    {
+      "title": "Geek Coverage",
+      "text": "Having my Tredmill covered for any issues gives me great peace of mind for years to come.  I use it everyday!!",
+      "rating": 5,
+      "date": "2021-03-01T15:04:25.000-06:00",
+      "author": "bikeman"
+    },
+    {
+      "title": "Glad service is available",
+      "text": "So thankful this is an option. Exercise equipment is an investment now, want to rest assured it will be repaired/maintained to last.\nHaven’t used it yet. Hoping it is easy, timely, reliable.",
+      "rating": 5,
+      "date": "2021-02-27T09:41:34.000-06:00",
+      "author": "TSmithS"
+    },
+    {
+      "title": "Treadmill",
+      "text": "A terrific product to stay for while indoors.  Highly recommended",
+      "rating": 5,
+      "date": "2021-02-27T09:04:53.000-06:00",
+      "author": "HighQualityBestBuy"
+    },
+    {
+      "title": "highly recommend! simple and effective treadmill",
+      "text": "This ProForm Carbon T7 Treadmill is exactly what I needed in our home gym to allow for an intense workout when I need it and to also allow for uphill walking while I read or catch up on my favorite shows. The iFit platform has been a hit in our house as well, the coached runs add a dynamic I wouldn’t have had otherwise, and we can track our fitness activity using our accounts on the treadmill and on our ProForm bike. For more intense workouts on the treadmill, I find the cushioning to be more forgiving than running on the road, and more comfortable than other treadmills I’ve owned in the past. As a Physical Therapist, I am always aware of the level of impact throughout a week of exercise, and I feel that I can comfortably log more miles when using the Carbon T7. The incline feature has been nice, this allows me to dial back speed and still get a decent workout. My husband has been walking at an incline while watching lectures or when in long video conference meetings. And as I mentioned, the iFit has been a nice added bonus that I did not expect to really utilize, for both the added instruction and engagement, and also for the cumulative stats that we can track between our two ProForm pieces of equipment. Assembly was straightforward, as instructed the assembly does require two people and can be completed in approx. one hour and it's fairly heavy so two people is a must. The treadmill folds up if you need to clear up space, it has a nice locking mechanism so you can easily fold it up and move it around. Thus far the product has been great. I was given this product in exchange for my honest and unbiased opinion, and I will certainly recommend this to my patients who are looking for a home treadmill based on the simplicity of operation, incline function, speed variability, comfort, and for the iFit that is included.",
+      "rating": 5,
+      "date": "2021-02-26T16:50:34.000-06:00",
+      "author": "caseyPT"
+    },
+    {
+      "title": "Professionals!",
+      "text": "Excellent setup, orientation and door to room delivery. Courteous and professional.",
+      "rating": 5,
+      "date": "2021-02-14T19:45:55.000-06:00",
+      "author": "thefle"
+    },
+    {
+      "title": "Thanks",
+      "text": "In trying to get healthy this year I bought this treadmill. I have always had a good interaction with geek squad.",
+      "rating": 5,
+      "date": "2021-02-14T13:33:15.000-06:00",
+      "author": "MichelleE"
+    },
+    {
+      "title": "Great to have added protection.",
+      "text": "I've heard several owners having small issues with their hydrow so we thought it would be best to have an added protection plan.",
+      "rating": 5,
+      "date": "2021-02-12T15:50:33.000-06:00",
+      "author": "DanielleP"
+    },
+    {
+      "title": "Great Geek Squad!",
+      "text": "The Geek Squad coverage has been very valuable and useful. I am glad I purchased this coverage for my items.",
+      "rating": 5,
+      "date": "2021-02-11T11:43:41.000-06:00",
+      "author": "Mike"
+    },
+    {
+      "title": "Great insurance for product",
+      "text": "This will ensure that even if my product fails, I can get it fized or replaced.",
+      "rating": 5,
+      "date": "2021-02-09T09:18:03.000-06:00",
+      "author": "Webjibaro"
+    },
+    {
+      "title": "Good idea to have",
+      "text": "Never had an issue with using the warranty plan. Had to use on few things & I didn't even need to locate the original packaging like some plans require.",
+      "rating": 5,
+      "date": "2021-02-08T20:38:26.000-06:00",
+      "author": "DJDJ"
+    },
+    {
+      "title": "Support",
+      "text": "Didn’t have to use it but ease of mind that support was available if something came up.",
+      "rating": 5,
+      "date": "2021-02-08T00:26:54.000-06:00",
+      "author": "EliO"
+    },
+    {
+      "title": "Safety Net",
+      "text": "Haven’t had to use it yet but happy to know I have it in the event something happens",
+      "rating": 5,
+      "date": "2021-02-07T17:19:19.000-06:00",
+      "author": "Musiq"
+    },
+    {
+      "title": "Just get the extended warranty",
+      "text": "Always get the extended warranty for items than take a lot of wear and tear.",
+      "rating": 5,
+      "date": "2021-02-01T12:31:56.000-06:00",
+      "author": "Moviecouple"
+    },
+    {
+      "title": "Services",
+      "text": "Love bestbuy services\nThey are always helpful and find a solution.",
+      "rating": 5,
+      "date": "2021-01-28T08:36:54.000-06:00",
+      "author": "Jake"
+    },
+    {
+      "title": "Rr",
+      "text": "Great purchase good quality Great purchase good quality",
+      "rating": 5,
+      "date": "2021-01-28T06:03:51.000-06:00",
+      "author": "Carlos"
+    },
+    {
+      "title": "Great",
+      "text": "Great purchase good quality Great purchase good quality",
+      "rating": 5,
+      "date": "2021-01-28T06:00:05.000-06:00",
+      "author": "Carlos"
+    },
+    {
+      "title": "BowFlex Max Trainer",
+      "text": "I love my new BowFlex Max trainer.  I has a variety of program workouts to give me a great workout",
+      "rating": 5,
+      "date": "2021-01-26T08:01:02.000-06:00",
+      "author": "BowFlex"
+    },
+    {
+      "title": "amazing",
+      "text": "I always trust the Geek squad for my repairs especially. when it is something expensive.",
+      "rating": 5,
+      "date": "2021-01-24T14:28:50.000-06:00",
+      "author": "GerVi7"
+    },
+    {
+      "title": "great idea",
+      "text": "good to have geek squad to a good job on replacement parts or the equipment, product",
+      "rating": 5,
+      "date": "2021-01-22T19:04:41.000-06:00",
+      "author": "frank"
+    },
+    {
+      "title": "BBY Service Plans",
+      "text": "rather have a warranty/service plan with best buy than direct with the company. Customer service is hit or miss with manufacturers... this ensures youll be taken care of by BBY.",
+      "rating": 5,
+      "date": "2021-01-18T11:22:26.000-06:00",
+      "author": "Cartoons4kids"
+    },
+    {
+      "title": "Excellent Tread mill",
+      "text": "Excellent treadmill. Very reliable.  No issues.. 100% recommendations",
+      "rating": 5,
+      "date": "2021-01-16T10:54:09.000-06:00",
+      "author": "Jmac"
+    },
+    {
+      "title": "treadmill protection a must",
+      "text": "Protection plan for my treadmill was a must when I use it everyday. And with having my PC on Protection too I got a nice discount for the 5 yr protection.",
+      "rating": 5,
+      "date": "2021-01-15T17:24:56.000-06:00",
+      "author": "Curtis"
+    },
+    {
+      "title": "Love extra warranty",
+      "text": "Love having this extra warranty for my equipment!!",
+      "rating": 5,
+      "date": "2021-01-09T09:25:38.000-06:00",
+      "author": "Go4th"
+    },
+    {
+      "title": "Hopeful",
+      "text": "Have not used this but when I am ready to use it I hope it's worth it. Especially when my treadmill only has a one year warranty.",
+      "rating": 5,
+      "date": "2021-01-08T22:38:50.000-06:00",
+      "author": "Laluss19"
+    },
+    {
+      "title": "5 year protection",
+      "text": "I haven't had an issue where I need geek squad protection but I'm glad I have it they're always professional",
+      "rating": 5,
+      "date": "2021-01-08T18:17:39.000-06:00",
+      "author": "Review"
+    },
+    {
+      "title": "It's worth it",
+      "text": "Purchased the GSP on exercise equipment purchase as the cost is reasonable, especially with the Total Tech Support!  I like the discount you get with the tech support on the protection plans.  I like the additional coverage on items with moving part or electronics.  You just never know when you'll need it.",
+      "rating": 5,
+      "date": "2021-01-08T17:24:35.000-06:00",
+      "author": "DLXX"
+    },
+    {
+      "title": "It's worth it",
+      "text": "Purchased the GSP on exercise equipment purchase as the cost is reasonable, especially with the Total Tech Support!  I like the additional coverage on items with moving part or electronics.  You just never know when you'll need it.",
+      "rating": 5,
+      "date": "2021-01-08T17:23:50.000-06:00",
+      "author": "DLXX"
+    },
+    {
+      "title": "Horrible",
+      "text": "The warranty is such a hassle if you sell the product you can not get a refund on the warranty. they always give you the run around on why the cant fix the item or anything not to help dont buy.",
+      "rating": 1,
+      "date": "2021-01-04T07:25:54.000-06:00",
+      "author": "Neno7162"
+    },
+    {
+      "title": "Great Service",
+      "text": "Having the in-home Geek Squad protection makes getting my equipment fixed quickly and easily without having to haul in my equipment to get fixed.",
+      "rating": 5,
+      "date": "2021-01-02T10:48:33.000-06:00",
+      "author": "Tina"
+    },
+    {
+      "title": "Good",
+      "text": "Got this for my threadmill, havent run into any issues yet.",
+      "rating": 5,
+      "date": "2021-01-01T22:35:18.000-06:00",
+      "author": "Andy"
+    },
+    {
+      "title": "Mostly good",
+      "text": "The installation went well, but the crew missed tightening 4 bolts. I had to guess how to get access to tighten these, which was kind of a pain.",
+      "rating": 5,
+      "date": "2021-01-01T16:06:18.000-06:00",
+      "author": "torch55"
+    },
+    {
+      "title": "Peace of mind",
+      "text": "Great to have the piece of mind that I will be taken care of if anything goes wrong beyond the manufacturer's warranty",
+      "rating": 5,
+      "date": "2020-12-31T08:19:29.000-06:00",
+      "author": "EM94"
+    }
+  ]
+}

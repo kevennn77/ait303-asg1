@@ -1,390 +1,189 @@
 #!/usr/bin/env python3
-"""Scrape Best Buy Bluetooth & Wireless Speaker reviews for aspect-based sentiment analysis."""
+"""Scrape Best Buy Bluetooth Speaker reviews via hidden API with curl_cffi TLS impersonation.
 
-import requests
-from bs4 import BeautifulSoup
+This scraper bypasses Akamai bot protection by using curl_cffi's Chrome TLS
+fingerprint impersonation and Best Buy's internal /ugc/v2/reviews JSON endpoint.
+No proxies needed — TLS impersonation alone is sufficient for this endpoint.
+
+Usage:
+    python bestbuy_scraper.py                           # Full scrape
+    python bestbuy_scraper.py --dry-run                  # Count reviews per product, skip save
+    python bestbuy_scraper.py --max-products 10          # First 10 products only
+    python bestbuy_scraper.py --reviews-per-product 50   # 50 reviews per product
+"""
+
+from curl_cffi import requests
 import time
 import random
 import json
 import csv
 import os
 import sys
-import re
 
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
 
-USER_AGENTS = [
-    # Windows Chrome
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-    # Mac Chrome
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-    # Linux Chrome
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-]
-
-CATEGORY_URL = (
-    "https://www.bestbuy.com/site/portable-audio/portable-speakers-docks-radios/"
-    "pcmcat310200050004.c?id=pcmcat310200050004&intl=nosplash"
-)
-
 OUTPUT_DIR = "data_asg/bestbuy"
 PRODUCTS_DIR = f"{OUTPUT_DIR}/products"
-MIN_REVIEWS = 80
-MAX_PRODUCTS = 40
-MAX_REVIEW_PAGES = 20
+REVIEWS_PER_PRODUCT = 100
+MAX_REVIEW_PAGES = 100       # safety limit (API also has its own pagination)
+PAUSE_MIN = 0.5              # seconds between pagination requests
+PAUSE_MAX = 1.5
 REQUEST_TIMEOUT = 30
+
+# Header for the hidden API call — Referer is required
+API_HEADERS = {
+    "Accept": "application/json",
+    "Referer": "https://www.bestbuy.com/",
+}
 
 # ---------------------------------------------------------------------------
 # Session
 # ---------------------------------------------------------------------------
 
-_session = requests.Session()
+_session = requests.Session(impersonate="chrome124")
 
 
 # ---------------------------------------------------------------------------
-# Fetch helpers
+# API helpers
 # ---------------------------------------------------------------------------
 
-def fetch_page(url: str) -> str:
-    """Fetch URL with randomized delay and rotating user-agent."""
-    delay = random.uniform(1.0, 3.0)
-    time.sleep(delay)
-
-    user_agent = random.choice(USER_AGENTS)
-    headers = {
-        "User-Agent": user_agent,
-        "Accept-Language": "en-US,en;q=0.9",
-    }
-
-    try:
-        resp = _session.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
-        resp.raise_for_status()
-        return resp.text
-    except requests.exceptions.RequestException as e:
-        print(f"  [ERROR] Request failed for {url}: {e}", file=sys.stderr)
-        return ""
+def _pause() -> None:
+    """Randomized delay between requests to avoid rate limiting."""
+    time.sleep(random.uniform(PAUSE_MIN, PAUSE_MAX))
 
 
-# ---------------------------------------------------------------------------
-# Parsing
-# ---------------------------------------------------------------------------
+def fetch_reviews_page(sku: str, page: int) -> dict | None:
+    """Fetch one page of reviews from Best Buy's hidden JSON API.
 
-def parse_listing(soup: BeautifulSoup) -> list[dict]:
-    """Extract product cards from listing page HTML.
+    Args:
+        sku: Best Buy product SKU (numeric string).
+        page: 1-indexed page number.
 
-    Returns a list of dicts with keys: sku, name, price, rating.
+    Returns:
+        Parsed JSON dict on success, None on failure.
     """
-    products = []
-
-    # Attempt 1: find product containers via common Best Buy patterns
-    product_elements = (
-        soup.find_all("li", class_=re.compile(r"sku-item", re.I))
-        or soup.find_all("li", class_=re.compile(r"product-item", re.I))
-        or soup.find_all("div", attrs={"data-product-sku": True})
+    url = (
+        f"https://www.bestbuy.com/ugc/v2/reviews"
+        f"?page={page}&pageSize=20&sku={sku}&sort=MOST_RECENT"
     )
 
-    for elem in product_elements:
-        try:
-            sku = (
-                elem.get("data-sku-id")
-                or elem.get("data-product-sku")
-                or None
-            )
-            name_el = elem.find(["h4", "h3", "h2", "a"], class_=re.compile(r"(name|title|heading)", re.I))
-            name = name_el.get_text(strip=True) if name_el else None
-
-            price_el = elem.find("span", class_=re.compile(r"price", re.I))
-            price = None
-            if price_el:
-                price_text = price_el.get_text(strip=True).replace("$", "").replace(",", "")
-                try:
-                    price = float(price_text)
-                except (ValueError, TypeError):
-                    price = None
-
-            rating = None
-            rating_el = elem.find("span", class_=re.compile(r"rating|star", re.I))
-            if rating_el:
-                rating_text = rating_el.get("data-rating") or rating_el.get_text(strip=True)
-                try:
-                    rating = float(rating_text)
-                except (ValueError, TypeError):
-                    rating = None
-
-            products.append({
-                "sku": sku,
-                "name": name,
-                "price": price,
-                "rating": rating,
-            })
-        except Exception:
-            continue
-
-    # Fallback: parse JSON-LD embedded data
-    if not products:
-        script_tags = soup.find_all("script", type="application/ld+json")
-        for script in script_tags:
-            try:
-                data = json.loads(script.string)
-                items = data if isinstance(data, list) else [data]
-                for item in items:
-                    if isinstance(item, dict) and item.get("@type") in ("Product", "ItemList"):
-                        if item.get("@type") == "ItemList" and "itemListElement" in item:
-                            for el in item["itemListElement"]:
-                                prod = el.get("item", el)
-                                products.append(_parse_ld_product(prod))
-                        else:
-                            products.append(_parse_ld_product(item))
-            except (json.JSONDecodeError, TypeError, AttributeError):
-                continue
-
-    return products
-
-
-def _parse_ld_product(item: dict) -> dict:
-    """Parse a single product from JSON-LD structured data."""
-    offers = item.get("offers", {})
-    if isinstance(offers, list):
-        offers = offers[0] if offers else {}
-    price_raw = offers.get("price", None)
+    _pause()
     try:
-        price = float(price_raw) if price_raw else None
-    except (ValueError, TypeError):
-        price = None
-
-    rating_raw = None
-    agg_rating = item.get("aggregateRating", {})
-    if agg_rating:
-        rating_raw = agg_rating.get("ratingValue", None)
-    try:
-        rating = float(rating_raw) if rating_raw else None
-    except (ValueError, TypeError):
-        rating = None
-
-    return {
-        "sku": item.get("sku", item.get("mpn", None)),
-        "name": item.get("name", None),
-        "price": price,
-        "rating": rating,
-    }
-
-
-def parse_reviews(soup: BeautifulSoup) -> list[dict]:
-    """Extract review items from review page HTML.
-
-    Returns a list of dicts with keys: title, text, rating, date.
-    """
-    reviews = []
-
-    # Attempt 1: structural selectors
-    review_elements = (
-        soup.find_all("div", class_=re.compile(r"review-item", re.I))
-        or soup.find_all("div", class_=re.compile(r"review-content", re.I))
-        or soup.find_all("li", class_=re.compile(r"review", re.I))
-    )
-
-    for elem in review_elements:
-        try:
-            title_el = elem.find(["h4", "h3", "h2", "strong", "b"],
-                                 class_=re.compile(r"(title|heading)", re.I))
-            title = title_el.get_text(strip=True) if title_el else None
-
-            text_el = elem.find("p", class_=re.compile(r"(review|text|content|body)", re.I))
-            text = text_el.get_text(strip=True) if text_el else None
-
-            rating_el = elem.find(class_=re.compile(r"(rating|star)", re.I))
-            rating = None
-            if rating_el:
-                # Try data attribute first, then class name with number, then text
-                rating_str = (
-                    rating_el.get("data-rating")
-                    or rating_el.get("data-score")
-                    or _extract_rating_from_class(rating_el.get("class", []))
-                    or rating_el.get_text(strip=True)
-                )
-                try:
-                    rating = float(rating_str)
-                except (ValueError, TypeError):
-                    rating = None
-
-            date_el = (
-                elem.find("time")
-                or elem.find("span", class_=re.compile(r"(date|time|submission)", re.I))
-                or elem.find("span", string=re.compile(r"\d{4}"))
-            )
-            date = date_el.get("datetime") or date_el.get_text(strip=True) if date_el else None
-
-            reviews.append({
-                "title": title or "",
-                "text": text or "",
-                "rating": rating,
-                "date": date or "",
-            })
-        except Exception:
-            continue
-
-    # Attempt 2: JSON-LD fallback for review data
-    if not reviews:
-        script_tags = soup.find_all("script", type="application/ld+json")
-        for script in script_tags:
-            try:
-                data = json.loads(script.string)
-                items = data if isinstance(data, list) else [data]
-                for item in items:
-                    if isinstance(item, dict) and item.get("@type") == "Review":
-                        reviews.append(_parse_ld_review(item))
-                    elif isinstance(item, dict) and "review" in item:
-                        r = item["review"]
-                        if isinstance(r, list):
-                            for rv in r:
-                                reviews.append(_parse_ld_review(rv))
-                        else:
-                            reviews.append(_parse_ld_review(r))
-            except (json.JSONDecodeError, TypeError, AttributeError):
-                continue
-
-    return reviews
-
-
-def _extract_rating_from_class(classes) -> float | None:
-    """Extract rating number from class names like 'rating-4' or 'stars-5'."""
-    if not classes:
+        resp = _session.get(url, headers=API_HEADERS, timeout=REQUEST_TIMEOUT)
+        if resp.status_code == 200:
+            return resp.json()
+        print(
+            f"  [ERROR] API returned HTTP {resp.status_code} "
+            f"for SKU {sku} page {page}",
+            file=sys.stderr,
+        )
         return None
-    for cls in classes:
-        m = re.search(r"(\d+(?:\.\d+)?)", cls)
-        if m:
-            try:
-                return float(m.group(1))
-            except ValueError:
-                continue
-    return None
+    except Exception as e:
+        print(
+            f"  [ERROR] Request failed for SKU {sku} page {page}: {e}",
+            file=sys.stderr,
+        )
+        return None
 
 
-def _parse_ld_review(item: dict) -> dict:
-    """Parse a single review from JSON-LD structured data."""
-    rating_raw = None
-    review_rating = item.get("reviewRating", {})
-    if review_rating:
-        rating_raw = review_rating.get("ratingValue", None)
-    try:
-        rating = float(rating_raw) if rating_raw else None
-    except (ValueError, TypeError):
-        rating = None
+# ---------------------------------------------------------------------------
+# Review extraction
+# ---------------------------------------------------------------------------
 
+def _parse_topic(topic: dict) -> dict:
+    """Convert a raw API topic dict into a uniform review record."""
     return {
-        "title": item.get("name", ""),
-        "text": item.get("reviewBody", ""),
-        "rating": rating,
-        "date": item.get("datePublished", ""),
+        "title": topic.get("title", "") or "",
+        "text": topic.get("text", "") or "",
+        "rating": topic.get("rating"),
+        "date": topic.get("submissionTime", "") or "",
+        "author": topic.get("author", "") or "",
     }
 
 
-# ---------------------------------------------------------------------------
-# Scraping orchestration
-# ---------------------------------------------------------------------------
+def scrape_product_reviews(
+    sku: str,
+    max_reviews: int = REVIEWS_PER_PRODUCT,
+) -> list[dict]:
+    """Scrape reviews for a single product via paginated API calls.
 
-def scrape_product_listing(category_url: str, max_products: int = MAX_PRODUCTS) -> list[dict]:
-    """Scrape product listing pages and return product metadata."""
-    products = []
-    page_url = category_url
+    Args:
+        sku: Best Buy product SKU.
+        max_reviews: Stop after collecting this many reviews.
 
-    while len(products) < max_products:
-        print(f"  Fetching product listing: {page_url[:80]}...")
-        html = fetch_page(page_url)
-        if not html:
-            break
-
-        soup = BeautifulSoup(html, "html.parser")
-        page_products = parse_listing(soup)
-
-        # Deduplicate by SKU
-        existing_skus = {p["sku"] for p in products if p["sku"]}
-        for p in page_products:
-            if p["sku"] and p["sku"] not in existing_skus:
-                products.append(p)
-                existing_skus.add(p["sku"])
-
-        if len(page_products) == 0:
-            break  # No more products found
-
-        # Try next page
-        next_link = soup.find("a", class_=re.compile(r"next", re.I)) or \
-                    soup.find("a", string=re.compile(r"next", re.I)) or \
-                    soup.find("link", attrs={"rel": "next"})
-        if next_link:
-            href = next_link.get("href")
-            if href:
-                page_url = href if href.startswith("http") else f"https://www.bestbuy.com{href}"
-            else:
-                break
-        else:
-            # Try pagination URL addition
-            if "?page=" in page_url:
-                current_page = int(re.search(r"page=(\d+)", page_url).group(1))
-                page_url = re.sub(r"page=\d+", f"page={current_page + 1}", page_url)
-            else:
-                page_url = f"{category_url}&page=2"
-
-    return products[:max_products]
-
-
-def scrape_reviews(sku: str, product_name: str, max_reviews: int = 100) -> list[dict]:
-    """Scrape review pages for a product and return a list of reviews."""
-    all_reviews = []
+    Returns:
+        List of review dicts sorted by MOST_RECENT.
+    """
+    reviews: list[dict] = []
 
     for page in range(1, MAX_REVIEW_PAGES + 1):
-        slug = product_name.lower().replace(" ", "-").replace("/", "-")
-        url = f"https://www.bestbuy.com/site/reviews/{slug}/{sku}?page={page}"
-        print(f"    Page {page}...")
-        html = fetch_page(url)
-        if not html:
+        if len(reviews) >= max_reviews:
             break
 
-        soup = BeautifulSoup(html, "html.parser")
-        reviews = parse_reviews(soup)
-
-        if not reviews:
-            break  # No more reviews
-
-        all_reviews.extend(reviews)
-
-        if len(all_reviews) >= max_reviews:
-            all_reviews = all_reviews[:max_reviews]
+        data = fetch_reviews_page(sku, page)
+        if not data:
             break
 
-    return all_reviews
+        topics = data.get("topics") or []
+        if not topics:
+            break
+
+        for topic in topics:
+            if topic.get("topicType") == "review":
+                reviews.append(_parse_topic(topic))
+
+        total_pages = data.get("totalPages", 0)
+        if page >= total_pages:
+            break
+
+    return reviews[:max_reviews]
 
 
 # ---------------------------------------------------------------------------
 # Output
 # ---------------------------------------------------------------------------
 
-def save_product_data(product: dict, reviews: list[dict], output_dir: str = PRODUCTS_DIR) -> None:
-    """Save per-product JSON with metadata and all reviews."""
+def save_product_data(
+    sku: str,
+    name: str,
+    reviews: list[dict],
+    output_dir: str = PRODUCTS_DIR,
+) -> None:
+    """Save per-product JSON with metadata and reviews."""
     os.makedirs(output_dir, exist_ok=True)
-    output = {**product, "reviews": reviews, "total_reviews_collected": len(reviews)}
-    path = f"{output_dir}/{product['sku']}.json"
+    path = f"{output_dir}/{sku}.json"
     try:
         with open(path, "w", encoding="utf-8") as f:
-            json.dump(output, f, indent=2, ensure_ascii=False)
+            json.dump(
+                {"sku": sku, "name": name, "reviews": reviews},
+                f,
+                indent=2,
+                ensure_ascii=False,
+            )
     except OSError as e:
         print(f"  [ERROR] Could not write {path}: {e}", file=sys.stderr)
 
 
-def save_consolidated(products_data: list[dict], reviews_data: list[dict],
-                      output_dir: str = OUTPUT_DIR) -> None:
+def save_consolidated(
+    products_data: list[dict],
+    reviews_data: list[dict],
+    output_dir: str = OUTPUT_DIR,
+) -> None:
     """Save consolidated products.json and all_reviews.csv."""
     os.makedirs(output_dir, exist_ok=True)
 
-    # Products catalog (metadata only, no reviews)
+    # Products catalog
     catalog_path = f"{output_dir}/products.json"
-    catalog = [{"sku": p["sku"], "name": p["name"], "price": p["price"], "rating": p["rating"]}
-               for p in products_data]
+    catalog = [
+        {
+            "sku": p["sku"],
+            "name": p["name"],
+            "review_count": p["review_count"],
+        }
+        for p in products_data
+    ]
     try:
         with open(catalog_path, "w", encoding="utf-8") as f:
             json.dump(catalog, f, indent=2, ensure_ascii=False)
@@ -392,7 +191,7 @@ def save_consolidated(products_data: list[dict], reviews_data: list[dict],
     except OSError as e:
         print(f"  [ERROR] Could not write {catalog_path}: {e}", file=sys.stderr)
 
-    # Consolidated CSV
+    # Consolidated CSV — same schema as before
     csv_path = f"{output_dir}/all_reviews.csv"
     fieldnames = ["product_name", "review_text", "rating", "date"]
     try:
@@ -410,37 +209,80 @@ def save_consolidated(products_data: list[dict], reviews_data: list[dict],
 # Main
 # ---------------------------------------------------------------------------
 
-def main() -> None:
-    """Orchestrate the full scraping pipeline."""
-    print("=" * 60)
-    print("  Best Buy Speaker Review Scraper")
-    print("=" * 60)
-    print()
+def load_product_list(path: str | None = None) -> list[dict]:
+    """Load the curated product list from a JSON file.
 
-    os.makedirs(PRODUCTS_DIR, exist_ok=True)
-
-    # Step 1: scrape product listing
-    print("[1/3] Scraping product listing...")
-    products = scrape_product_listing(CATEGORY_URL, MAX_PRODUCTS)
-    print(f"  Found {len(products)} products")
-    print()
-
-    if not products:
-        print("[ERROR] No products found. Check the category URL.")
+    Defaults to ``data_asg/bestbuy/products.json``.
+    Each entry must have at least ``sku`` and ``name``.
+    """
+    if path is None:
+        path = f"{OUTPUT_DIR}/products.json"
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            products = json.load(f)
+        if not products:
+            print(f"[ERROR] Product list is empty: {path}", file=sys.stderr)
+            sys.exit(1)
+        return products
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[ERROR] Could not load product list from {path}: {e}", file=sys.stderr)
         sys.exit(1)
 
-    # Step 2: scrape reviews for each product
-    print(f"[2/3] Scraping reviews for {len(products)} products...")
+
+def main() -> None:
+    """Orchestrate the full scraping pipeline."""
+    # ---- CLI overrides ----
+    dry_run = "--dry-run" in sys.argv
+    max_products = None
+    reviews_per_product = REVIEWS_PER_PRODUCT
+
+    args = sys.argv[1:]
+    for i, arg in enumerate(args):
+        if arg == "--max-products" and i + 1 < len(args):
+            max_products = int(args[i + 1])
+        elif arg == "--reviews-per-product" and i + 1 < len(args):
+            reviews_per_product = int(args[i + 1])
+
+    # ---- Header ----
+    print("=" * 60)
+    print("  Best Buy Speaker Review Scraper  (curl_cffi + Hidden API)")
+    print("=" * 60)
+    print(f"  Dry run:    {'YES' if dry_run else 'no'}")
+    print(f"  Reviews/product: {reviews_per_product}")
     print()
-    all_reviews = []
-    products_with_data = []
+
+    # ---- Step 1: Load product list ----
+    products = load_product_list()
+    if max_products:
+        products = products[:max_products]
+    print(f"[1/3] Loaded {len(products)} products from product list")
+    print()
+
+    # ---- Step 2: Scrape reviews ----
+    print(f"[2/3] Scraping reviews via hidden API...")
+    print()
+    all_reviews: list[dict] = []
+    products_with_data: list[dict] = []
 
     for i, product in enumerate(products, 1):
-        name = product["name"] or f"SKU-{product['sku']}"
-        print(f"  ({i}/{len(products)}) {name}")
-        reviews = scrape_reviews(product["sku"], name)
-        save_product_data(product, reviews)
-        print(f"    → {len(reviews)} reviews collected")
+        sku = product["sku"]
+        name = product["name"]
+        print(f"  ({i}/{len(products)}) [{sku}] {name}")
+
+        # Pre-query total_pages for progress indication (quick page=1 call)
+        preview = fetch_reviews_page(sku, 1)
+        if preview:
+            total = preview.get("totalPages", "?")
+            print(f"         API reports ~{total} pages available")
+        else:
+            print(f"         ⚠ Could not reach API — skipping")
+            continue
+
+        reviews = scrape_product_reviews(sku, reviews_per_product)
+        print(f"         → {len(reviews)} reviews collected")
+
+        if not dry_run:
+            save_product_data(sku, name, reviews)
 
         for r in reviews:
             all_reviews.append({
@@ -453,30 +295,33 @@ def main() -> None:
         products_with_data.append({**product, "review_count": len(reviews)})
         print()
 
-    # Step 3: save consolidated output
-    print(f"[3/3] Saving consolidated output...")
-    save_consolidated(products_with_data, all_reviews)
-    print()
+    # ---- Step 3: Save consolidated output ----
+    if dry_run:
+        print(f"[3/3] DRY RUN — no files written")
+    else:
+        print(f"[3/3] Saving consolidated output...")
+        save_consolidated(products_with_data, all_reviews)
 
-    # Final summary
+    print()
     print("=" * 60)
     print("  SCRAPE COMPLETE")
     print("=" * 60)
-    print(f"  Total products scraped: {len(products_with_data)}")
-    print(f"  Total reviews collected: {len(all_reviews)}")
-    print(f"  Output: {OUTPUT_DIR}/")
+    print(f"  Products scraped:   {len(products_with_data)}")
+    print(f"  Total reviews:      {len(all_reviews)}")
+    print(f"  Output directory:   {OUTPUT_DIR}/")
     print()
 
-    # Warn about products with fewer than 80 reviews
+    # Warn about low-review products
     low = [(p["name"], p["review_count"]) for p in products_with_data
-           if p["review_count"] < MIN_REVIEWS]
+           if p["review_count"] < 80]
     if low:
-        print(f"  ⚠ Products with < {MIN_REVIEWS} reviews ({len(low)}):")
+        print(f"  ⚠ Products with < 80 reviews ({len(low)}):")
         for name, count in low:
             print(f"    - {name}: {count} reviews")
+        print()
 
+    print("  Next: run aspect_extraction.ipynb for topic modeling.")
     print()
-    print("  Next: load data into aspect_extraction.ipynb for topic modeling.")
 
 
 if __name__ == "__main__":

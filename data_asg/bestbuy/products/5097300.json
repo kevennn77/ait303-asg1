@@ -1,0 +1,706 @@
+{
+  "sku": "5097300",
+  "name": "Amazon Tap Speaker",
+  "reviews": [
+    {
+      "title": "Love It",
+      "text": "This is the best Bluetooth speaker made in history had for 5 years!!! Love has traveled with me everywhere…",
+      "rating": 5,
+      "date": "2021-08-06T14:20:33.000-05:00",
+      "author": "Eva7"
+    },
+    {
+      "title": "Pretty good.",
+      "text": "Pretty good sound, not the best but good for the price and portability.",
+      "rating": 5,
+      "date": "2020-12-26T22:12:32.000-06:00",
+      "author": "Paul"
+    },
+    {
+      "title": "Portable entertainment and information source",
+      "text": "Carry this from room to room for playing 60s or 70s music. Weather reports and timmers also. Too bad they quit making these.",
+      "rating": 5,
+      "date": "2019-10-20T04:29:14.000-05:00",
+      "author": "Firefighter25"
+    },
+    {
+      "title": "Love it",
+      "text": "Works great , perfect for reminders and setting a timer , great to take out for music as well",
+      "rating": 5,
+      "date": "2019-08-22T01:01:00.000-05:00",
+      "author": "Jonnyboy82"
+    },
+    {
+      "title": "Amazon Tap",
+      "text": "I love my Tap better than the Full size Echo plus. The tap has better sound, can be carried to pool and can Bluetooth to my MP3 player!",
+      "rating": 5,
+      "date": "2019-06-21T14:33:09.000-05:00",
+      "author": "Nikki"
+    },
+    {
+      "title": "Good sound quality, love the bluetooth",
+      "text": "Perfect for my office. Combined with Prime, you've got music to last the week without hearing anything repeated. Bluetooth lets you take it outside if you've got good signals.",
+      "rating": 5,
+      "date": "2019-06-19T18:03:22.000-05:00",
+      "author": "Cyclist"
+    },
+    {
+      "title": "This is a great speaker",
+      "text": "This is a great speaker with quality sound for any size room",
+      "rating": 5,
+      "date": "2019-06-14T19:59:28.000-05:00",
+      "author": "Linda"
+    },
+    {
+      "title": "Love it",
+      "text": "Easy setup, fun to use with quality sound. Would recommend to all my friends",
+      "rating": 5,
+      "date": "2019-05-15T20:37:39.000-05:00",
+      "author": "Peanuts"
+    },
+    {
+      "title": "Sound not so good",
+      "text": "The sound is not great on this one. Maybe new generations better",
+      "rating": 2,
+      "date": "2019-04-17T18:29:09.000-05:00",
+      "author": "Beebee"
+    },
+    {
+      "title": "Love it",
+      "text": "I really love this amazon tap. I take it everywhere. Its great for the pool and alexa can be really funny",
+      "rating": 5,
+      "date": "2019-04-17T17:18:51.000-05:00",
+      "author": "Ckit"
+    },
+    {
+      "title": "Great Portable Speaker",
+      "text": "I use this when I\"m cooking outside, so great to have a speaker that doesn't tie up my phone. It's also great to have a timer available.",
+      "rating": 5,
+      "date": "2019-03-21T05:17:01.000-05:00",
+      "author": "Skooter25"
+    },
+    {
+      "title": "Hands Free Is For Me",
+      "text": "This is one of the best pieces of technology I have purchased. I could make phone calls come a plane music, turn lights on and off, etc. No limitations with this baby.",
+      "rating": 5,
+      "date": "2019-03-20T21:19:30.000-05:00",
+      "author": "ColemanJames"
+    },
+    {
+      "title": "Excellent",
+      "text": "The item is working as described and am happy with the quality and performance.",
+      "rating": 5,
+      "date": "2019-03-20T17:30:05.000-05:00",
+      "author": "Excellent"
+    },
+    {
+      "title": "The best in the Echo family",
+      "text": "Absolutely love my Amazon Tap and that I can bring it anywhere with me. Clarity is amazing and the volume can be nice and loud.",
+      "rating": 5,
+      "date": "2019-02-20T21:11:23.000-06:00",
+      "author": "MrsDMV"
+    },
+    {
+      "title": "Great speaker",
+      "text": "Portable to take where you go in the house. Great sound where you want it.",
+      "rating": 5,
+      "date": "2019-02-20T18:27:52.000-06:00",
+      "author": "Grace"
+    },
+    {
+      "title": "Chirps",
+      "text": "Speakers chips when sitting on charging base for more than a day.",
+      "rating": 3,
+      "date": "2018-09-05T23:16:32.000-05:00",
+      "author": "Meanum"
+    },
+    {
+      "title": "Been happy",
+      "text": "Sound and reception are great, the only downside of this is the capabilities that the other products have, like the hub to control devices, lights and make calls.",
+      "rating": 4,
+      "date": "2018-09-04T21:51:42.000-05:00",
+      "author": "Samusersung"
+    },
+    {
+      "title": "Great for teens",
+      "text": "Not always able to find something that passes my grandson’s approval. This did!",
+      "rating": 5,
+      "date": "2018-08-30T18:24:24.000-05:00",
+      "author": "Jojo"
+    },
+    {
+      "title": "Great product",
+      "text": "Great product and high quality as you always get with Best Buy!",
+      "rating": 5,
+      "date": "2018-08-30T09:29:09.000-05:00",
+      "author": "jbheels"
+    },
+    {
+      "title": "Great product",
+      "text": "Love it and so convenient. Take anywhere. Great for outdoor parties",
+      "rating": 5,
+      "date": "2018-08-30T05:00:14.000-05:00",
+      "author": "Tameka"
+    },
+    {
+      "title": "Nice gadget",
+      "text": "This is my first “virtual assistant” device and so far I absolutely like it. I haven’t set it up to do all the tasks advertised on tv but I will soon",
+      "rating": 5,
+      "date": "2018-08-29T16:54:47.000-05:00",
+      "author": "Gusmeneses"
+    },
+    {
+      "title": "Great Speaker",
+      "text": "It's so easy to use and portable. Love it! Take it out to garage, patio, camping...",
+      "rating": 5,
+      "date": "2018-08-16T14:06:25.000-05:00",
+      "author": "Intogadgets"
+    },
+    {
+      "title": "great machine",
+      "text": "works just like any alexa machine but entirely portable",
+      "rating": 5,
+      "date": "2018-08-08T16:18:16.000-05:00",
+      "author": "hemi"
+    },
+    {
+      "title": "Sound is Great",
+      "text": "First time I listened to a Tap at my friends house it sounded better than the Echo!",
+      "rating": 5,
+      "date": "2018-08-07T15:36:05.000-05:00",
+      "author": "EchoFan"
+    },
+    {
+      "title": "Love it! Take it everywhere.",
+      "text": "I have all of the Alexa products including this tap, dots, echos and fire tv - love them all! Wish I had adapted to them earlier. We take the Tap with us everywhere including our backyard to our RV.",
+      "rating": 5,
+      "date": "2018-07-20T10:13:47.000-05:00",
+      "author": "MarkT"
+    },
+    {
+      "title": "One of a kind",
+      "text": "There may be speakers that sound better or there may be bluetooth speakers that have better battery life. But, there are none that combine great sound, decent battery life (have used them for a full day on battery), AND throw in Alexa voice control in one package (until maybe Sonos) It's nice to be working in the yard and tell Alexa to play something or pause something, especially if your hands are dirty. But it's AWESOME to tell that same speaker \"Alexa, turn on the yard lights\"...... I bought one for each of my daughters as gifts!",
+      "rating": 5,
+      "date": "2018-07-20T09:11:21.000-05:00",
+      "author": "PapaC"
+    },
+    {
+      "title": "Just Awesome",
+      "text": "The Tap is a great addition to our household. The portability feature is great.",
+      "rating": 5,
+      "date": "2018-07-20T09:10:02.000-05:00",
+      "author": "memmd"
+    },
+    {
+      "title": "Great low price sound",
+      "text": "It has fantastic 360 sound for being a smaller sized compact speaker. It is so cool to just tap it to ask it to play the old rock song that in the mood for!!!",
+      "rating": 5,
+      "date": "2018-06-27T08:30:32.000-05:00",
+      "author": "Texas"
+    },
+    {
+      "title": "Great smart home device",
+      "text": "Great device speaker is very loud but battery dies quickly. Certain things this model can not do but does just enough for me and my family.",
+      "rating": 4,
+      "date": "2018-05-16T21:53:19.000-05:00",
+      "author": "Jlax16"
+    },
+    {
+      "title": "didn’t like that it wasn’t hands free",
+      "text": "I liked that product because it produced a lot of sound for its size but didn’t like that you had to press a button to interact with it",
+      "rating": 3,
+      "date": "2018-05-16T18:51:17.000-05:00",
+      "author": "Tink"
+    },
+    {
+      "title": "Portable Speaker",
+      "text": "I bought this because it was on sale for $89. I like that it is portable but it you are in the area of an unknown wireless connection you need to set it up through your Alexa app before the speaker will work. Also, the speaker periodically will chime when no key was said.",
+      "rating": 5,
+      "date": "2018-05-16T13:40:45.000-05:00",
+      "author": "In4dfun2"
+    },
+    {
+      "title": "Portable",
+      "text": "I wanted a portable speaker that worked with Amazon prime music. There is nothing in the market right now that does that except for the Tap. For the $100 price its fine. I would rather spend $200 and get a better sound quality speaker though since it will be used outside as well as is in the kitchen.",
+      "rating": 4,
+      "date": "2018-04-18T08:07:20.000-05:00",
+      "author": "Lane"
+    },
+    {
+      "title": "Nice!",
+      "text": "Loud enough for small gatherings & very responsive to commands.",
+      "rating": 5,
+      "date": "2018-04-18T01:13:21.000-05:00",
+      "author": "jxpaulina"
+    },
+    {
+      "title": "It's Ok",
+      "text": "Not too satisfied with the sound and it loses Bluetooth connection no matter what phone I use (either Iphone or Android).",
+      "rating": 2,
+      "date": "2018-04-11T08:28:01.000-05:00",
+      "author": "SHADOW23STALKER"
+    },
+    {
+      "title": "Too difficult to figure out",
+      "text": "I spent more time trying get it functioning than I did actually keeping this product. After a couple of days and never getting it to understand or follow my commands I returned it to BB. Also it kept trying to sell me products which I really didn’t appreciate.",
+      "rating": 1,
+      "date": "2018-03-21T22:15:06.000-05:00",
+      "author": "Jack"
+    },
+    {
+      "title": "Perfect speaker for house",
+      "text": "Great speaker for around the house listening to music and asking questions",
+      "rating": 5,
+      "date": "2018-03-15T08:19:04.000-05:00",
+      "author": "Jbheels"
+    },
+    {
+      "title": "Hands-free",
+      "text": "My Echo hasn't updated to the latest version that allows for hands-free operation. I'm not sure what the problem is.",
+      "rating": 3,
+      "date": "2018-03-10T06:35:38.000-06:00",
+      "author": "Edwsn2005"
+    },
+    {
+      "title": "Fun fun fun",
+      "text": "Took a bit of time but I figured how to get the most out out using Alexa and luv it.",
+      "rating": 4,
+      "date": "2018-02-27T17:12:22.000-06:00",
+      "author": "Pogera"
+    },
+    {
+      "title": "Nice portable speaker with Alexa",
+      "text": "This was my first Alexa device and until I got a dot I was very satisfied with it After the Dot, I missed the voice activation. No Amazon has updated the software to where it will respond to voice commands so not problems with it at all . You need to keep it on the charge stand if you are going to use voice commands.",
+      "rating": 4,
+      "date": "2018-02-26T07:29:21.000-06:00",
+      "author": "pm546"
+    },
+    {
+      "title": "Works great.",
+      "text": "Gave as a gift. Easy set up. Great for outdoor use.",
+      "rating": 5,
+      "date": "2018-02-22T12:05:49.000-06:00",
+      "author": "Carbo"
+    },
+    {
+      "title": "Incredible",
+      "text": "The echo Tap is the best of the echo products. It's portability is its best feature",
+      "rating": 5,
+      "date": "2018-02-22T00:20:40.000-06:00",
+      "author": "Rwdelgado"
+    },
+    {
+      "title": "great portable speaker",
+      "text": "love this portable speaker. it works great and i have no issues connecting to all sorts of media. only wish it would have the drop in feature. not sure if amazon will add eventually but otherwise worth the money",
+      "rating": 5,
+      "date": "2018-02-21T21:39:47.000-06:00",
+      "author": "richant"
+    },
+    {
+      "title": "Not Easy",
+      "text": "Having a hard time getting this to match up with the rest of my echo stuff.",
+      "rating": 2,
+      "date": "2018-02-21T20:22:09.000-06:00",
+      "author": "TOMsEchoDot1"
+    },
+    {
+      "title": "Love it",
+      "text": "Recommend this to anyone. The sound system is awesome and easy instructions to follow to activate. My kids use it everyday.",
+      "rating": 5,
+      "date": "2018-02-21T17:01:02.000-06:00",
+      "author": "Beanie"
+    },
+    {
+      "title": "Great addition to the Alexa line",
+      "text": "Great portability, good workaround for a clock radio, space saving",
+      "rating": 4,
+      "date": "2018-02-11T10:20:20.000-06:00",
+      "author": "TopangaK"
+    },
+    {
+      "title": "Love it.",
+      "text": "I love that I have to tap it, Alexa is not listening.\r\nI use it mainly for music.",
+      "rating": 5,
+      "date": "2018-02-09T18:06:01.000-06:00",
+      "author": "Dogmom"
+    },
+    {
+      "title": "Product has outstanding sound--fits our needs.",
+      "text": "Initially purchased product we didn't need or want and returned to store and obtained this product. It is perfect for our needs--portable and great sound quality. Very pleased with it.",
+      "rating": 5,
+      "date": "2018-02-08T12:52:24.000-06:00",
+      "author": "Sassy21"
+    },
+    {
+      "title": "Alexa, Lets go for a ride?",
+      "text": "The Echo Tap is a great way to take Alexa voice service around as you travel, with the added benefit of a bluetooth speaker. A software update now allows hands free mode, so it makes it more versatile. Got this on sale at BBY along with an Echo Dot.",
+      "rating": 5,
+      "date": "2018-02-06T11:17:06.000-06:00",
+      "author": "Buy411"
+    },
+    {
+      "title": "Great sound",
+      "text": "Hears commands easily. Even my son with delayed speech can command the tap.\r\nBattery lasts ages.\r\nThe only downside is you can't call from her.",
+      "rating": 4,
+      "date": "2018-02-04T11:52:12.000-06:00",
+      "author": "Tripndicular"
+    },
+    {
+      "title": "My father loves it",
+      "text": "Christmas gift for my dad he loves it. He is 87 and it was easy to set up. He loves the reminders and his music",
+      "rating": 5,
+      "date": "2018-02-03T07:50:00.000-06:00",
+      "author": "dmdunn"
+    },
+    {
+      "title": "Great device for info and music",
+      "text": "I was worried this wouldn't hold up to my expectations, but the sound is amazing, the battery life is great and I like that I can move it around easily, but still have the use of Alexa.",
+      "rating": 5,
+      "date": "2018-02-02T22:14:04.000-06:00",
+      "author": "mikeyk80"
+    },
+    {
+      "title": "Ask Alexis is very to have because it answers ev",
+      "text": "My review for Alexis is very good. It answer all my questions.",
+      "rating": 5,
+      "date": "2018-02-02T17:00:59.000-06:00",
+      "author": "Mike52"
+    },
+    {
+      "title": "Not Easy",
+      "text": "Having a hard time getting it to work. Not easy at all.",
+      "rating": 2,
+      "date": "2018-02-02T12:03:26.000-06:00",
+      "author": "Papathad"
+    },
+    {
+      "title": "Awesome",
+      "text": "Bought her (Alexa) lol for my wife and she loves it. She does everything with her (Alexa) my wife uses it to put my youngest down to sleep. It’s loud enough to have gatherings outside on the deck. You also can play adult Travia games. Excellent buy!!!",
+      "rating": 5,
+      "date": "2018-02-02T06:12:09.000-06:00",
+      "author": "Stayfresh32"
+    },
+    {
+      "title": "Just simple and anyone could set it up",
+      "text": "Works great and was easy to set up. I use it all the time due to its simplicity.",
+      "rating": 5,
+      "date": "2018-01-30T09:06:07.000-06:00",
+      "author": "Sgtjack"
+    },
+    {
+      "title": "Good sound",
+      "text": "Plays really well, have problems with skipping while using Bluetooth. Alexa is super convenient around the house. Speaker has good volume and the ability to be voice activated or touch activated.",
+      "rating": 4,
+      "date": "2018-01-27T18:20:02.000-06:00",
+      "author": "Wolfy"
+    },
+    {
+      "title": "Son in law loved it as a gift",
+      "text": "Son in law loved it as a gift, sound quality was amazing",
+      "rating": 5,
+      "date": "2018-01-26T20:47:05.000-06:00",
+      "author": "BBConsumer"
+    },
+    {
+      "title": "Great speaker and assistant",
+      "text": "Great experience! Works as spoused, no problems experienced",
+      "rating": 5,
+      "date": "2018-01-26T20:03:00.000-06:00",
+      "author": "Anton"
+    },
+    {
+      "title": "Amazon Tap",
+      "text": "Good speaker, loud but problems staying connected to the internet for Alexa to work. Bluetooth hooks up without any problems.",
+      "rating": 4,
+      "date": "2018-01-26T19:22:07.000-06:00",
+      "author": "Ken2446"
+    },
+    {
+      "title": "Enjoying Alexa still learning",
+      "text": "Still trying different things but I am enjoying experience very much",
+      "rating": 5,
+      "date": "2018-01-26T17:41:22.000-06:00",
+      "author": "Jones"
+    },
+    {
+      "title": "Love it",
+      "text": "Works Great just ask and it gives you info right away",
+      "rating": 5,
+      "date": "2018-01-22T23:55:41.000-06:00",
+      "author": "Ajaj"
+    },
+    {
+      "title": "Cool",
+      "text": "This this is fun to play with and has great sound quality for music",
+      "rating": 5,
+      "date": "2018-01-22T15:11:33.000-06:00",
+      "author": "Cody"
+    },
+    {
+      "title": "Great device",
+      "text": "The amazon tap is wonderful! It does everything it's supposed to do!",
+      "rating": 5,
+      "date": "2018-01-19T15:22:26.000-06:00",
+      "author": "LANDO92"
+    },
+    {
+      "title": "Its fun.",
+      "text": "It's fun to try stumping Alexa with questions. The more you use it. the smarter it gets",
+      "rating": 5,
+      "date": "2018-01-19T08:46:54.000-06:00",
+      "author": "Rick"
+    },
+    {
+      "title": "Tap Tap",
+      "text": "another worthy addition to the echo family! packs a good punch for the size.",
+      "rating": 5,
+      "date": "2018-01-19T06:50:19.000-06:00",
+      "author": "Mike57"
+    },
+    {
+      "title": "Good Deal",
+      "text": "The Speaker works very well and makes it easy to listen to my Amazon Prime music.It sounds good for it's size. I bought another to give as a gift.",
+      "rating": 4,
+      "date": "2018-01-18T21:13:13.000-06:00",
+      "author": "blcohen79"
+    },
+    {
+      "title": "love, love this",
+      "text": "love having music, weather and alarms in seconds. Alexa is awesome",
+      "rating": 5,
+      "date": "2018-01-18T09:23:13.000-06:00",
+      "author": "poodlesmom"
+    },
+    {
+      "title": "Works great!",
+      "text": "It’s really cool. And it was very easy to setup and get going!",
+      "rating": 5,
+      "date": "2018-01-17T23:02:27.000-06:00",
+      "author": "Manda"
+    },
+    {
+      "title": "Great speaker",
+      "text": "Bought this to bring on vacation at a lake house. Took it out to the dock by the water and it sounded great!",
+      "rating": 5,
+      "date": "2018-01-17T20:37:21.000-06:00",
+      "author": "Gnote"
+    },
+    {
+      "title": "Great speaker for anyone to use",
+      "text": "Love using my Alazon Alexa. Comes in handy for getting the weather in the mornings and having hands free music and whatever else you want from it. Like ordering a pizza!",
+      "rating": 5,
+      "date": "2018-01-17T19:21:43.000-06:00",
+      "author": "BreannCap"
+    },
+    {
+      "title": "Amazon - Amazon Tap Portable Bluetooth and Wi-Fi S",
+      "text": "Good item, lots of fun. There are better models but they also cost more.\r\nI am satisfied",
+      "rating": 4,
+      "date": "2018-01-17T18:54:06.000-06:00",
+      "author": "Dczech"
+    },
+    {
+      "title": "Poor wifi pickup",
+      "text": "very very poor wifi pickup, I tried multiple taps to no avail",
+      "rating": 3,
+      "date": "2018-01-17T18:05:30.000-06:00",
+      "author": "Alberti4"
+    },
+    {
+      "title": "Perfect now!",
+      "text": "Tap is now absolutely perfect since the software update enables you to use voice commands without “tapping” first. Great Bluetooth speaker and love Alexa!",
+      "rating": 5,
+      "date": "2018-01-17T18:04:21.000-06:00",
+      "author": "Wilska50"
+    },
+    {
+      "title": "love it!!",
+      "text": "I love my Echo Tap! After using this for a while I went out and bought 2 dots. Works well",
+      "rating": 5,
+      "date": "2018-01-16T15:54:06.000-06:00",
+      "author": "chef8432"
+    },
+    {
+      "title": "Very satisfied with this product.",
+      "text": "I am very happy with the Amazon Tap. I especially like the hands free part of the product so I do not have to \"tap\" the speaker to respond to commands. Can play my stations I have already set up with Pandora. Sound quality is great and I love that you can take the unit out in the garage and get a quality sound without hooking up to a power supply.",
+      "rating": 5,
+      "date": "2018-01-16T13:55:59.000-06:00",
+      "author": "TimJ"
+    },
+    {
+      "title": "Echo Tap",
+      "text": "I love this item because it is portable and I can still carry all of my Amazon Music wherever I go.",
+      "rating": 5,
+      "date": "2018-01-15T09:52:18.000-06:00",
+      "author": "dawglbers11"
+    },
+    {
+      "title": "Great buy",
+      "text": "Best Alexa device! It has all the functionality of the other devices and it’s also wireless.",
+      "rating": 5,
+      "date": "2018-01-15T07:39:46.000-06:00",
+      "author": "Bigred84"
+    },
+    {
+      "title": "Tap leveled up!",
+      "text": "The reason I finally got a Tap is because Amazon has finally enabled it to have \"always listening\" on. No longer does it need to have a button pressed in order to give a command or question. The sound is great on the speaker.",
+      "rating": 5,
+      "date": "2018-01-14T18:36:46.000-06:00",
+      "author": "wagostini"
+    },
+    {
+      "title": "Maybe good if on move alot",
+      "text": "Tried one out at Christmas, but decided to return it for the 2nd gen echo. Best Buy great with exchange. Best Buy has a speaker you can make a dot portable with that works great to make portable. Tap might be nice to wet feet with for first unit.",
+      "rating": 3,
+      "date": "2018-01-14T14:02:32.000-06:00",
+      "author": "TheDude"
+    },
+    {
+      "title": "Nice feature to keep home secure.",
+      "text": "I have not activated the Amazon Tap speaker but have reviewed the instructions. It appears that it will take a minimal amount of tech skills for anyone to get it running.",
+      "rating": 3,
+      "date": "2018-01-13T23:00:32.000-06:00",
+      "author": "znark5129"
+    },
+    {
+      "title": "Fun gadget for the home",
+      "text": "Capable if running a lot of things from a voice command. Looking forward to learning all the features. Could have better set up instructions.",
+      "rating": 5,
+      "date": "2018-01-13T17:23:25.000-06:00",
+      "author": "TJSoup"
+    },
+    {
+      "title": "Awesome",
+      "text": "Bought as a gift for my mom for Christmas she loves it the volume exceeds expectation.",
+      "rating": 5,
+      "date": "2018-01-13T03:23:54.000-06:00",
+      "author": "Nika"
+    },
+    {
+      "title": "Ok",
+      "text": "Item works well. Got it for a coworker, they love it.",
+      "rating": 5,
+      "date": "2018-01-12T22:57:32.000-06:00",
+      "author": "Kristian"
+    },
+    {
+      "title": "Awesome",
+      "text": "This portable speaker is easy to use, versatile and great sound.",
+      "rating": 4,
+      "date": "2018-01-12T22:46:11.000-06:00",
+      "author": "Elmo"
+    },
+    {
+      "title": "Amazon Tap Sound",
+      "text": "The Amazon Tap has excellent sound qualities for such a small unit.\r\nLove the portability of the device.",
+      "rating": 5,
+      "date": "2018-01-12T21:02:04.000-06:00",
+      "author": "Moondo"
+    },
+    {
+      "title": "Love My Echo Tap",
+      "text": "Love my Echo Tap! It's portable and allows me to take anywhere within the house or outside by the pool. The sound quality is great!!",
+      "rating": 5,
+      "date": "2018-01-12T20:44:48.000-06:00",
+      "author": "Perk"
+    },
+    {
+      "title": "Love Alexa! Much easier than “Googling.”",
+      "text": "The Echo is great! We love asking for weather conditions, to have lights turned on and off, playing music from Spotify, and for trivial info!",
+      "rating": 5,
+      "date": "2018-01-12T18:12:00.000-06:00",
+      "author": "Jake"
+    },
+    {
+      "title": "Love it !",
+      "text": "It replaces my echo. This one you can take anywhere and is rechargeable.",
+      "rating": 5,
+      "date": "2018-01-12T17:41:04.000-06:00",
+      "author": "JC626"
+    },
+    {
+      "title": "works like echo, but portal with battery",
+      "text": "So that I can move this speaker around without need of power outlet.",
+      "rating": 5,
+      "date": "2018-01-12T17:14:32.000-06:00",
+      "author": "Q1989X64"
+    },
+    {
+      "title": "Best Alexa!",
+      "text": "It's much better than expected. It's an Echo with built-in battery you can take anywhere (wish it was water resistant/proof). Sounds very good, has good battery life and once you upgrade to latest software you can enable feature so you don't need to keep pressing button to talk to Alex!",
+      "rating": 5,
+      "date": "2018-01-09T14:32:39.000-06:00",
+      "author": "EdFullerton"
+    },
+    {
+      "title": "was a gift for a teenager and he was very pleased",
+      "text": "I was at a loss for a gift for my grandson who is 18. When the salesperson at Best Buy showed me this item and told me what all it could do, this sounded like the perfect gift. I was well pleased.",
+      "rating": 5,
+      "date": "2018-01-08T11:26:54.000-06:00",
+      "author": "5501"
+    },
+    {
+      "title": "Convenient wireless speaker",
+      "text": "This is a very convenient wireless speaker that is even easier to use with Alexa. Set up is a little tricky though.",
+      "rating": 4,
+      "date": "2018-01-06T10:32:24.000-06:00",
+      "author": "Clayfish"
+    },
+    {
+      "title": "My son loves it",
+      "text": "Got this for my 21 yr old son. He loves it. It’s smaller than what I expected. Just wish I could drop-in on him using this.",
+      "rating": 4,
+      "date": "2018-01-05T20:17:14.000-06:00",
+      "author": "MJR2018"
+    },
+    {
+      "title": "Great product",
+      "text": "Love the Alexa Tap because of the quality and the portability",
+      "rating": 5,
+      "date": "2018-01-05T19:08:22.000-06:00",
+      "author": "Louis"
+    },
+    {
+      "title": "Cool gadget",
+      "text": "We are still learning how to use this. But so far we have had a lot of fun with it. It definitely is helpful as far as reminding us of what and when we have things to do. The alarm feature is pretty awesome too!",
+      "rating": 5,
+      "date": "2018-01-05T18:10:12.000-06:00",
+      "author": "KimmyL"
+    },
+    {
+      "title": "Great Sound Quality",
+      "text": "The sounds quality of this is fantastic, which is one of the reasons for the purchase. Was looking for a wireless speaker and get the Alexa features as a bonus!",
+      "rating": 5,
+      "date": "2018-01-05T17:56:13.000-06:00",
+      "author": "RJSEGN"
+    },
+    {
+      "title": "A box of fun!",
+      "text": "The whole family is enjoying this purchase! Granddaughter likes to hear jokes, Grandpa is all about the News flash, we've played Jeopardy and checked the weather. The alarm feature is worth the money in itself. We were set up in minutes and purchased the light bulb that Alexa can turn on and off just for fun!",
+      "rating": 5,
+      "date": "2018-01-05T17:38:58.000-06:00",
+      "author": "Evenstar7"
+    },
+    {
+      "title": "Great sound and function",
+      "text": "This is a great portable speaker and the Alexa features make it a lot of fun to play with and use.",
+      "rating": 5,
+      "date": "2018-01-05T17:18:52.000-06:00",
+      "author": "Divemasterdrew"
+    },
+    {
+      "title": "great portable Alexa device",
+      "text": "This battery operated Alexa speaker has good sound although not quite as good as the Echo 2nd Gen. Also with a software upgrade has a hands-free feature.",
+      "rating": 4,
+      "date": "2018-01-05T16:54:41.000-06:00",
+      "author": "OldGeek"
+    },
+    {
+      "title": "Cool speaker",
+      "text": "It has both smart features and a speaker.Smart speakers are good but this is one of its kind that’s portable others have to be connected to an port to work",
+      "rating": 5,
+      "date": "2018-01-05T16:52:08.000-06:00",
+      "author": "Manoj"
+    }
+  ]
+}
