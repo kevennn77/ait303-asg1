@@ -383,7 +383,7 @@ for fold, (train_idx, val_idx) in enumerate(cv.split(lemmatized_texts, y)):
 - **Using word2vec OOV for rare words:** When a word appears in the tokenizer vocab but not in word2vec, it gets a zero vector. This is fine for ~1-5K OOV words but if miss rate >30%, vocabulary needs trimming (increase min_count or reduce max_features).
 - **Setting trainable=False on Embedding:** CONTEXT.md explicitly says fine-tune. Don't freeze the embeddings unless validation shows overfitting.
 - **Not setting mask_zero=True:** Without masking, the BiGRU processes padding tokens and wastes computation. Always set `mask_zero=True` on the Embedding layer when using post-padding.
-- **Using different precision/recall averaging than Phase 2:** Phase 2 used `macro` averaging. Phase 3 must use the same for fair comparison.
+- **Using different precision/recall averaging than Phase 2:** Phase 2 was initially planned with `macro` averaging but refactored to `weighted` during execution (see STATE.md). The SVM notebook's `evaluate_model()` uses tf/keras default `binary` averaging for binary classification. Phase 3 per-fold metrics use `binary` default (consistent with Phase 2's actual test evaluation). For fair comparison, align averaging method — plans use `binary` default matching the run-time SVM behavior.
 
 ## Don't Hand-Roll
 
@@ -676,7 +676,7 @@ The following patterns from Phase 2's `svm_sentiment_models.ipynb` must be prese
 | **Preprocessed Data Loading** | `pd.read_csv('data/preprocessed_imdb.csv')` → `df` with columns: review, sentiment, cleaned, stemmed, lemmatized | Reuse identical loading. Phase 3 uses `lemmatized` column only. |
 | **Label Encoding** | `df['sentiment'].map({'positive': 1, 'negative': 0})` | Reuse identical encoding |
 | **StratifiedKFold Seed** | `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)` | MUST use identical seed for fair comparison. Copy verbatim. |
-| **Evaluation Metrics** | `accuracy_score`, `precision_score(macro)`, `recall_score(macro)`, `f1_score(macro)`, `confusion_matrix` | Reuse identical metrics INCLUDING averaging method (macro). Add `roc_auc_score`. |
+| **Evaluation Metrics** | `accuracy_score`, `precision_score`, `recall_score`, `f1_score`, `confusion_matrix`, `roc_auc_score` | Use `binary` default averaging (matching refactored Phase 2 default). Per-fold metrics table + one representative confusion matrix + ROC curve. |
 | **Confusion Matrix Viz** | `sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['negative','positive'], yticklabels=['negative','positive'])` | Reuse identical visualization style |
 | **Notebook Section Style** | Markdown headers (`## Section N:`), code cells with inline prints, `print('='*50)` separators | Reuse same style for consistency |
 | **Model Comparison Table** | `pd.DataFrame` with columns: Model, Accuracy, Precision, Recall, F1, CV_Mean_F1 | Extend to include Phase 3 models alongside Phase 2 best model |
@@ -701,14 +701,14 @@ The following patterns from Phase 2's `svm_sentiment_models.ipynb` must be prese
 | A4 | Tokenizer vocab limited to top 20K words is sufficient | Architecture Patterns | Medium — if word2vec vocab is 30K+ and we cap at 20K, ~33% of tokens become OOV. Consider using word2vec vocab size directly if tokenizer isn't limited. |
 | A5 | maxlen=200 covers >90% of reviews after stopword removal | Common Pitfalls | Low — original median is 174 words per review. Stopword removal reduces ~30-40%, so median is ~100-120. 200 is conservative. |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Should we use `Tokenizer(num_words=MAX_NB_WORDS)` or build vocabulary from the word2vec model's vocab?**
+1. **Should we use `Tokenizer(num_words=MAX_NB_WORDS)` or build vocabulary from the word2vec model's vocab? — RESOLVED**
    - **What we know:** Tokenizer with `num_words=N` limits to top N words. word2vec with `min_count=5` already filters rare words. Using word2vec's vocabulary directly (all words that have vectors) gives maximum coverage.
    - **What's unclear:** If word2vec produces vocab_size=25K, all 25K words have embeddings. Should we use all 25K or cap at 20K? Using all 25K maximizes coverage but increases embedding matrix size marginally.
    - **Recommendation:** Use word2vec's vocabulary directly as the tokenizer's vocabulary. This ensures every token with an embedding is in the vocabulary. Set `vocab_size = len(word2vec_model.wv) + 2` and build tokenizer vocab from word2vec's words. This eliminates OOV for any word that appeared ≥5 times in the corpus.
 
-2. **Should we aggregate CV predictions or report per-fold metrics?**
+2. **Should we aggregate CV predictions or report per-fold metrics? — RESOLVED**
    - **What we know:** Phase 2 reported per-fold mean ± std and also final test-set metrics.
    - **What's unclear:** With 10 training runs, reporting both per-fold confusion matrices AND aggregated metrics is verbose.
    - **Recommendation:** Report per-fold metrics as a table (mean ± std), show one representative fold's confusion matrix, and optionally aggregate all fold predictions for a single confusion matrix. This keeps the notebook readable.
