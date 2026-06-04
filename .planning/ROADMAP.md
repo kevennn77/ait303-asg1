@@ -145,6 +145,8 @@
 
 **Requirements:** RPT-01, RPT-02, RPT-03, RPT-04, RPT-05, RPT-06, RPT-07, RPT-08, DLVR-01, DLVR-02, DLVR-03, DLVR-04
 
+**Plans:** 2 plans in 1 wave
+
 **Success Criteria:**
 1. Report organized into proper sections (Introduction, Methodology, Sentiment Analysis, ABSA, Results, Conclusion)
 2. Workflow discussion covers all steps from data prep to evaluation
@@ -159,6 +161,10 @@
 11. PDF report and all deliverables uploaded
 
 **Dependencies:** Phase 2, Phase 3, Phase 4, Phase 5
+
+**Plans:**
+- [ ] 06-01-PLAN.md — Report Writing: write 8-section academic report in Word (Introduction through References) with all tables, confusion matrices, charts
+- [ ] 06-02-PLAN.md — Deliverables & Submission: organize cloud folder, upload to OneDrive/Google Drive, export PDF, insert link, submit to Moodle
 
 ---
 
