@@ -16,3 +16,5 @@ __pycache__/
 # Temporary files
 *.tmp
 *.swp
+data_asg/IMDB Dataset.csv
+data_asg/preprocessed_imdb.csv
