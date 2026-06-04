@@ -9,6 +9,16 @@
 
 ## 1. Introduction
 
+> **📋 Figure Reference Legend**
+> All figures referenced below (Figure 1–9) come from the executed notebook outputs:
+> - Figures 1–3: `svm_sentiment_models.ipynb` (Cells 27, 43, 44, 41)
+> - Figure 4: `notebooks/aspect_extraction.ipynb` (Cell 20)
+> - Figure 5: pyLDAvis screenshot from same Cell 20
+> - Figure 6: BERTopic screenshot from Cell 28
+> - Figures 7–9: Saved PNG files from `product_ranking.ipynb` (Cells 27, 29, 33)
+> 
+> Insert each figure at the **[FIGURE N: Title]** marker during Word layout.
+
 Sentiment analysis is a fundamental task in natural language processing (NLP) that aims to determine the emotional tone or opinion expressed in text. While traditional sentiment analysis assigns a single polarity (positive, negative, or neutral) to an entire document, Aspect-Based Sentiment Analysis (ABSA) goes a step further by identifying specific aspects or features of a product or service and determining the sentiment expressed toward each aspect. This granular approach provides more actionable insights, particularly in product review analysis where understanding which features customers like or dislike is more valuable than a single overall rating.
 
 This assignment implements a complete ABSA pipeline comprising two main components: (1) sentiment classification using four machine learning models trained on the IMDB 50K movie review dataset, and (2) aspect extraction from scraped Best Buy Bluetooth speaker reviews using unsupervised and semi-supervised topic modeling techniques.
@@ -150,6 +160,8 @@ The confusion matrix for the best model (TFIDF + Lemmatized) showed:
 
 This indicates that the model correctly classified 9,049 out of 10,000 test reviews, with a slight tendency toward false positives (classifying negative reviews as positive).
 
+**[FIGURE 1: SVM Confusion Matrices] → Insert 4 heatmaps from `svm_sentiment_models.ipynb` Cell 27. Arrange as a 2×2 grid showing all 4 SVM variants (CV+Stemmed, CV+Lemmatized, TFIDF+Stemmed, TFIDF+Lemmatized). Caption: "Figure 1: Confusion matrix heatmaps for all four SVM variants. The TFIDF+Lemmatized model (bottom-right) shows the strongest diagonal values."**
+
 ### 3.2 Sentiment Model Results — BiGRU
 
 Both BiGRU variants were evaluated using 5-fold cross-validation. Table 2 presents the aggregate metrics.
@@ -161,6 +173,10 @@ Both BiGRU variants were evaluated using 5-fold cross-validation. Table 2 presen
 | Skip-Gram-BiGRU | 0.8970 ± 0.0076 | 0.8815 ± 0.0285 | 0.9192 ± 0.0243 | **0.8994 ± 0.0045** | 0.9625 ± 0.0017 |
 
 The Skip-Gram-BiGRU variant outperformed CBOW-BiGRU across accuracy, recall, F1-score, and ROC-AUC, though with lower precision. The Skip-Gram-BiGRU model also demonstrated lower variance across folds (F1 std = 0.0045 vs 0.0169 for CBOW), indicating more stable performance. Its higher recall (0.9192) means it was better at identifying positive reviews, which is valuable for the downstream ranking task where positive sentiment detection drives the scoring.
+
+**[FIGURE 2: BiGRU ROC Curves] → Insert 2 line charts from `bigru_sentiment_models.ipynb` Cells 43-44. Caption: "Figure 2: ROC curves across 5 cross-validation folds for (a) CBOW-BiGRU and (b) Skip-Gram-BiGRU models."**
+
+**[FIGURE 3: BiGRU Training Loss] → Insert the loss curve from `bigru_sentiment_models.ipynb` Cell 41. Show a representative fold to demonstrate convergence. Caption: "Figure 3: Training and validation loss curves for CBOW-BiGRU (representative fold)."**
 
 ### 3.3 Overall Model Comparison
 
@@ -190,11 +206,17 @@ The LDA grid search over K = 6 to 10 topics produced the following C_v coherence
 
 The optimal model at K=9 achieved a C_v coherence of 0.441. The top keywords across the 9 topics included interpretable clusters related to sound quality (e.g., "sound", "quality", "audio"), battery performance (e.g., "battery", "charge", "life"), portability (e.g., "portable", "size", "small"), and pricing (e.g., "price", "value", "money"). The addition of stopword removal to the preprocessing pipeline improved coherence by approximately 27%, from 0.346 (without stopword removal) to 0.441 (with stopword removal).
 
+**[FIGURE 4: LDA Coherence Plot] → Insert bar/line chart from `notebooks/aspect_extraction.ipynb` Cell 20. Caption: "Figure 4: C_v topic coherence scores across grid search (K=6 to K=10). The optimal model at K=9 achieved a coherence of 0.441."**
+
+**[FIGURE 5: LDA Intertopic Distance] → Insert the pyLDAvis chart from `notebooks/aspect_extraction.ipynb` Cell 20 (interactive HTML). Take a screenshot of the default view. Caption: "Figure 5: pyLDAvis intertopic distance map showing topic separation at K=9."**
+
 #### 3.4.2 BERTopic Results
 
 BERTopic generated 48 distinct topics from 3,199 reviews, with 1,051 reviews (32.9%) classified as outliers. The large number of topics reflects BERTopic's fine-grained clustering approach, which captures specific product attributes and user experiences. The inter-topic distance map showed good separation between major topic clusters, indicating that the embedding space effectively captured semantic differences between review content.
 
 However, the high outlier rate (32.9%) and large number of topics (48) made direct interpretation challenging. The granularity, while precise, required substantial manual aggregation to map topics to the 8 predefined aspect categories needed for the downstream ranking task.
+
+**[FIGURE 6: BERTopic Inter-Topic Distance] → Insert the inter-topic distance map from `notebooks/aspect_extraction.ipynb` Cell 28 (interactive HTML). Take a screenshot of the default 2D projection. Caption: "Figure 6: BERTopic inter-topic distance map showing 48 topic clusters. Major clusters map to Sound Quality, Battery, and Comfort/Portability categories."**
 
 #### 3.4.3 CorEx Results
 
@@ -214,11 +236,17 @@ The anchored CorEx model was trained with 8 predefined aspect categories (matchi
 
 Seven of the eight anchored aspects produced coherent, interpretable topics. The "Design" aspect showed moderate overlap with "Build Quality," suggesting that these two concepts are closely related in the context of speaker reviews. The anchor strength setting (3.0) effectively guided the topic model toward the predefined categories while still allowing corpus-driven word associations.
 
+**[FIGURE 9: Sentiment Distribution by Aspect] → Insert `sentiment_by_aspect.png` from notebook output. Caption: "Figure 9: Stacked bar chart showing the distribution of positive and negative reviews across all 8 aspects."**
+
 ### 3.5 Product Ranking Results
 
 #### 3.5.1 Top 5 Products Per Aspect
 
 For each of the 7 aspects (excluding "Features" due to insufficient coverage), products were ranked by their positive sentiment ratio. Table 5 presents the top 5 products for each aspect.
+
+**[FIGURE 7: Product Rankings Facet Grid] → Insert `product_rankings_chart.png` from notebook output. Caption: "Figure 7: Facet grid of top 5 products per aspect ranked by positive sentiment ratio. Each subplot shows one of the 7 aspects with horizontal bar charts."**
+
+**Table 5: Top 5 Products per Aspect (by Positive Sentiment Ratio)**
 
 **Table 5: Top 5 Products per Aspect (by Positive Sentiment Ratio)**
 
@@ -310,7 +338,11 @@ The **Altec Lansing Jolt Mini Lifejacket** was selected as the best overall prod
 | Connectivity | 88.9% | 8/9 | 4.33 |
 | Price | 77.3% | 17/22 | 4.23 |
 
-The product achieved perfect positive sentiment scores in Build Quality and Sound Quality, with strong scores across Comfort/Portability, Battery, and Connectivity. The lowest score was in Price (77.3%), where some reviewers felt the product could be more competitively priced relative to alternatives. Nevertheless, the average customer rating of 4.56 out of 5, combined with coverage of 6 out of 7 assessed aspects, demonstrates a consistently well-regarded product across the dimensions that matter most to speaker buyers.
+The product achieved perfect positive sentiment scores in Build Quality and Sound Quality, with strong scores across Comfort/Portability, Battery, and Connectivity. The lowest score was in Price (77.3%), where some reviewers felt the product could be more competitively priced relative to alternatives.
+
+**[FIGURE 8: Best Product Aspect Profile] → Insert `best_product_profile.png` from notebook output. Caption: "Figure 8: Aspect profile for the Altec Lansing Jolt Mini Lifejacket showing positive sentiment ratios across 6 aspects. Build Quality and Sound Quality achieved perfect scores."**
+
+Nevertheless, the average customer rating of 4.56 out of 5, combined with coverage of 6 out of 7 assessed aspects, demonstrates a consistently well-regarded product across the dimensions that matter most to speaker buyers.
 
 ---
 
