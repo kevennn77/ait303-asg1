@@ -7,7 +7,7 @@ An academic NLP project implementing a complete aspect-based sentiment analysis 
 ```
 IMDB 50K Dataset ──> Preprocessing ──> SVM + BiGRU Sentiment Models ──> Best Model
                                                                              │
-Best Buy Speakers ──> curl_cffi Scraper ──> LDA / BERTopic / CorEx ─────────┤
+Best Buy Speakers ──> curl_cffi Scraper ──> LDA / BERTopic / CorEx ──────────┤
                                                                              │
                           ┌──────────────────────────────────────────────────┘
                           ▼
@@ -16,17 +16,18 @@ Best Buy Speakers ──> curl_cffi Scraper ──> LDA / BERTopic / CorEx ─�
 
 ## Notebooks (run in order)
 
-| # | Notebook | Description | ⏱ |
-|---|----------|-------------|----|
-| 1 | `sentiment_analysis_preprocessing.ipynb` | Load IMDB 50K, text cleaning pipeline | ~2 min |
-| 2 | `svm_sentiment_models.ipynb` | 4 SVM variants (CountVectorizer/Tfidf × stemmed/lemmatized) with 5-fold CV | ~15-30 min |
-| 3 | `bigru_sentiment_models.ipynb` | Word2Vec (CBOW + Skip-Gram) + BiGRU models with 5-fold CV | ~30-60 min |
-| 4 | `notebooks/aspect_extraction.ipynb` | LDA, BERTopic, CorEx aspect extraction on scraped Best Buy reviews | ~10-15 min |
-| 5 | `notebooks/product_ranking.ipynb` | Sentiment labeling, aspect scoring, product rankings, charts | ~3 min |
+| # | Notebook                                   | Description                                                                 | ⏱         |
+| - | ------------------------------------------ | --------------------------------------------------------------------------- | ---------- |
+| 1 | `sentiment_analysis_preprocessing.ipynb` | Load IMDB 50K, text cleaning pipeline                                       | ~2 min     |
+| 2 | `svm_sentiment_models.ipynb`             | 4 SVM variants (CountVectorizer/Tfidf × stemmed/lemmatized) with 5-fold CV | ~15-30 min |
+| 3 | `bigru_sentiment_models.ipynb`           | Word2Vec (CBOW + Skip-Gram) + BiGRU models with 5-fold CV                   | ~30-60 min |
+| 4 | `notebooks/aspect_extraction.ipynb`      | LDA, BERTopic, CorEx aspect extraction on scraped Best Buy reviews          | ~10-15 min |
+| 5 | `notebooks/product_ranking.ipynb`        | Sentiment labeling, aspect scoring, product rankings, charts                | ~3 min     |
 
 ## Setup
 
 ### Local (VS Code)
+
 ```bash
 # Create virtual environment
 python -m venv .venv
@@ -38,6 +39,7 @@ python -m spacy download en_core_web_sm
 ```
 
 ### Google Colab
+
 Each notebook has a `COLAB = True` flag at the top. Upload `data_asg/` to `MyDrive/data_asg/`, then run all cells.
 
 ## Key Results
@@ -56,14 +58,14 @@ Each notebook has a `COLAB = True` flag at the top. Upload `data_asg/` to `MyDri
 
 ## Deliverables
 
-| Artifact | Location |
-|----------|----------|
-| Jupyter Notebooks | Root + `notebooks/` |
-| Scraper script | `bestbuy_scraper.py` |
-| Scraped data | `data_asg/bestbuy/` |
-| Saved models | `models/` (generated on Colab) |
-| PDF Report | Submitted to Moodle |
-| Cloud backup | Google Drive / OneDrive |
+| Artifact          | Location                         |
+| ----------------- | -------------------------------- |
+| Jupyter Notebooks | Root +`notebooks/`             |
+| Scraper script    | `bestbuy_scraper.py`           |
+| Scraped data      | `data_asg/bestbuy/`            |
+| Saved models      | `models/` (generated on Colab) |
+| PDF Report        | Submitted to Moodle              |
+| Cloud backup      | Google Drive / OneDrive          |
 
 ## Requirements
 
