@@ -9,16 +9,6 @@
 
 ## 1. Introduction
 
-> **📋 Figure Reference Legend**
-> All figures referenced below (Figure 1–9) come from the executed notebook outputs:
-> - Figures 1–3: `svm_sentiment_models.ipynb` (Cells 27, 43, 44, 41)
-> - Figure 4: `notebooks/aspect_extraction.ipynb` (Cell 20)
-> - Figure 5: pyLDAvis screenshot from same Cell 20
-> - Figure 6: BERTopic screenshot from Cell 28
-> - Figures 7–9: Saved PNG files from `product_ranking.ipynb` (Cells 27, 29, 33)
-> 
-> Insert each figure at the **[FIGURE N: Title]** marker during Word layout.
-
 Sentiment analysis is a fundamental task in natural language processing (NLP) that aims to determine the emotional tone or opinion expressed in text. While traditional sentiment analysis assigns a single polarity (positive, negative, or neutral) to an entire document, Aspect-Based Sentiment Analysis (ABSA) goes a step further by identifying specific aspects or features of a product or service and determining the sentiment expressed toward each aspect. This granular approach provides more actionable insights, particularly in product review analysis where understanding which features customers like or dislike is more valuable than a single overall rating.
 
 This assignment implements a complete ABSA pipeline comprising two main components: (1) sentiment classification using four machine learning models trained on the IMDB 50K movie review dataset, and (2) aspect extraction from scraped Best Buy Bluetooth speaker reviews using unsupervised and semi-supervised topic modeling techniques.
