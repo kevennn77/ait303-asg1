@@ -18,3 +18,14 @@ __pycache__/
 *.swp
 data_asg/IMDB Dataset.csv
 data_asg/preprocessed_imdb.csv
+
+# Planning & project management artifacts
+.planning/
+AGENTS.md
+assignment.md
+
+# Research PDFs & personal files
+*Assignment 1 Cover Page*.docx
+*Coursework_v3.0*.pdf
+*GeeksforGeeks*.pdf
+*TDS Archive*.pdf
